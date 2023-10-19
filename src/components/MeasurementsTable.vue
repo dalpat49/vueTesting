@@ -57,6 +57,9 @@
                     resultDisplay.innerHTML = "Error getting location: " + error.message;
                 });
             });
+
+
+            // fingerprint testig start 
             const authenticateButton = document.getElementById("authenticateButton");
 
 
@@ -111,6 +114,7 @@
                         .create(createCredentialDefaultArgs)
                         .then((cred) => {
                           console.log("NEW CREDENTIAL", cred);
+                          alert('Authentication sucessfully completed')
                           // normally the credential IDs available for an account would come from a server
                           // but we can just copy them from above…
                           const idList = [
@@ -128,12 +132,14 @@
                         })
                         .catch((err) => {
                           console.log("ERROR", err);
-  });
+                  });
                 } catch (error) {
                     console.log("Fingerprint authentication failed:", error);
                     alert("Fingerprint authentication failed. Please try again or use an alternative method.");
                 }
             });
+            // fingerprint testig end 
+
         });
 
         // Function to calculate the distance between two sets of coordinates using the Haversine formula
