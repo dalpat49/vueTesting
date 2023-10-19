@@ -57,6 +57,36 @@
                     resultDisplay.innerHTML = "Error getting location: " + error.message;
                 });
             });
+            const authenticateButton = document.getElementById("authenticateButton");
+
+
+            authenticateButton.addEventListener("click", async () => {
+                try {
+                    // Generate a random challenge value (base64 encoded)
+                    // const challenge = btoa(crypto.getRandomValues(new Uint8Array(32)));
+                    let credential = await navigator.credentials.create({
+                      publicKey: {
+                        challenge: new Uint8Array([117, 61, 252, 231, 191, 241, ]),
+                        rp: { id: "acme.com", name: "ACME Corporation" },
+                        user: {
+                          id: new Uint8Array([79, 252, 83, 72, 214, 7, 89, 26]),
+                          name: "jamiedoe",
+                          displayName: "Jamie Doe"
+                        },
+                        pubKeyCredParams: [ {type: "public-key", alg: -7} ]
+                      }
+                    });
+
+                    // If authentication is successful, you can proceed with your application logic.
+                    if (credential) {
+                        alert("Fingerprint authentication successful!");
+                        // Add your application logic here.
+                    }
+                } catch (error) {
+                    console.log("Fingerprint authentication failed:", error);
+                    alert("Fingerprint authentication failed. Please try again or use an alternative method.");
+                }
+            });
         });
 
         // Function to calculate the distance between two sets of coordinates using the Haversine formula
@@ -76,19 +106,25 @@
             return distance;
         }
 
+        
+
 
 </script>
 
 
 <template>
   <div>
-	<h1>This is my  new app totally</h1>
-  <input type="file" accept="jpg,png" />
-  <button id="getLocation">Get Location</button>
-  <p id="demo"></p>
+    <h1>This is my  new app totally</h1>
+    <input type="file" accept="jpg,png" />
+    <button id="getLocation">Get Location</button>
+    <p id="demo"></p>
 
-  <button id="checkLocation">Check Location</button>
-    <p id="result"></p>
+    <button id="checkLocation">Check Location</button>
+      <p id="result"></p>
+
+      <h1>Fingerprint Authentication</h1>
+    <button id="authenticateButton">Authenticate with Fingerprint</button>
+
 	</div>
 </template>
 
