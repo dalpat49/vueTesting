@@ -1,5 +1,7 @@
 
 <script setup lang="js">
+import firebase from 'firebase/app';
+import 'firebase/messaging'; // Import the messaging module
  // Check if the Geolocation API is available in the user's browser
  document.addEventListener("DOMContentLoaded", function() {
  if ("geolocation" in navigator) {
@@ -159,8 +161,21 @@
             return distance;
         }
 
-        
-
+        function requestNotificationPermission() {
+            const messaging = firebase.messaging() // Get the messaging instance
+            messaging.requestPermission()
+              .then(() => {
+                console.log('Notification permission granted')
+                return messaging.getToken()
+              })
+              .then(token => {
+                console.log('FCM Token:', token)
+                // Send this token to your server for sending notifications
+              })
+              .catch(error => {
+                console.error('Notification permission denied', error)
+              })
+          }
 
 </script>
 
@@ -178,6 +193,7 @@
       <h1>Fingerprint Authentication</h1>
     <button id="authenticateButton">Authenticate with Fingerprint</button>
 
+    <button @click="requestNotificationPermission">Enable Push Notifications</button>
 	</div>
 </template>
 
