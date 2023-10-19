@@ -6,11 +6,7 @@
 </template>
 
 <script setup>
-import {ref} from 'vue'
 
-alert('this is a aap')
-const getlocaldata = ref(localStorage.getItem('getlocaldata'));
-alert(getlocaldata)
 
 </script>
 
