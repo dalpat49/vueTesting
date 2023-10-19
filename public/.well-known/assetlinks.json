@@ -3,6 +3,6 @@
       "target": {
         "namespace": "android_app",
         "package_name": "app.netlify.testingpwa.twa",
-        "sha256_cert_fingerprints": ["E0:88:3B:72:5E:53:0A:41:58:56:E7:C4:5A:DF:A1:BA:5B:3D:A3:44:70:19:F1:A7:A5:DC:1F:71:4D:2B:72:24"]
+        "sha256_cert_fingerprints": ["C9:32:CC:5D:71:54:C9:12:04:FB:C8:85:A0:86:37:72:FF:26:AD:7A:8E:C4:6E:A3:65:D0:1B:48:8E:F0:59:F3"]
       }
     }]
