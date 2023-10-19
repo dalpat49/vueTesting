@@ -1,6 +1,6 @@
 <template>
   <div>
-	<h1>This is my clicking app</h1>
+	<h1>This is my  app</h1>
 	</div>
 </template>
 
