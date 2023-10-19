@@ -1,10 +1,3 @@
-<template>
-  <div>
-	<h1>This is my  new app totally</h1>
-  <input type="file" accept="jpg,png" />
-  <button id="getLocation">Get Location</button>
-	</div>
-</template>
 
 <script setup>
  // Check if the Geolocation API is available in the user's browser
@@ -35,6 +28,15 @@
         }
 
 </script>
+
+
+<template>
+  <div>
+	<h1>This is my  new app totally</h1>
+  <input type="file" accept="jpg,png" />
+  <button id="getLocation">Get Location</button>
+	</div>
+</template>
 
 
 <style lang="scss">
