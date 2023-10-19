@@ -4,12 +4,13 @@
 	</div>
 </template>
 
-<script>
+<script setup>
+import {ref} from 'vue'
 
-export default {
-  name: 'MeasurementsTable',
-  
-}
+alert('this is a aap')
+const getlocaldata = ref(localStorage.getItem('getlocaldata'));
+alert(getlocaldata)
+
 </script>
 
 
