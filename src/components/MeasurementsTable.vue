@@ -1,6 +1,7 @@
 
-<script setup>
+<script setup lang="js">
  // Check if the Geolocation API is available in the user's browser
+ document.addEventListener("DOMContentLoaded", function() {
  if ("geolocation" in navigator) {
             // Get the button element
             var getLocationButton = document.getElementById("getLocation");
@@ -26,6 +27,7 @@
         } else {
             locationDisplay.innerHTML = "Geolocation is not available in your browser.";
         }
+      });
 
 </script>
 
@@ -35,6 +37,7 @@
 	<h1>This is my  new app totally</h1>
   <input type="file" accept="jpg,png" />
   <button id="getLocation">Get Location</button>
+  <p id="demo"></p>
 	</div>
 </template>
 
