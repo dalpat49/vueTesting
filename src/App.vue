@@ -226,10 +226,7 @@ getToken(messaging, {
 
 body {
 	font-family: "Urbanist", sans-serif;
-	line-height: 1.5;
 	min-height: 100vh;
-	padding-top: 5vw;
-	padding-bottom: 5vw;
 	background-color: var(--c-gray-400);
 }
 
@@ -244,11 +241,8 @@ button {
 }
 
 .phone {
-	width: 460px;
-	border-radius: 25px;
 	overflow: hidden;
 	padding: 2rem;
-	box-shadow: 0 0 0 10px var(--c-gray-300), 0 0 0 11px var(--c-gray-200);
 	background-color: #fff;
 	position: relative;
 	z-index: 1;
