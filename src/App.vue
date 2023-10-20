@@ -1,25 +1,57 @@
+<script setup>
+import MeasurementsTable from './components/MeasurementsTable.vue'
+import PWAPrompt from './components/PWAPrompt.vue'
+import { getMessaging, getToken , onMessage } from "firebase/messaging";
+
+import { initializeApp } from "firebase/app";
+
+const firebaseConfig = {
+  apiKey: "AIzaSyAPptOBI52Kw39NggC7szv-dDFcQy8-UhM",
+  authDomain: "testingpwa-d131d.firebaseapp.com",
+  projectId: "testingpwa-d131d",
+  storageBucket: "testingpwa-d131d.appspot.com",
+  messagingSenderId: "136578668350",
+  appId: "1:136578668350:web:d3cf098088ac10571a3e6f",
+  measurementId: "G-E0LXV17Z05"
+};
+
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+
+
+// Get registration token. Initially this makes a network call, once retrieved
+// subsequent calls to getToken will return from cache.
+const messaging = getMessaging();
+onMessage(messaging, (payload) => {
+    console.log('Message received. ', payload);
+    // ...
+  });
+getToken(messaging, { vapidKey: 'BPBd7Kmno_7kOJRGDH82WYdIAa5fjXYd4lWtOaxXnZ2PugpNYdtQuJk-J_ePuf_iK01Kp_pDuCOxpKsqNPUpDoI' }).then((currentToken) => {
+  if (currentToken) {
+    // Send the token to your server and update the UI if necessary
+    // ...
+    console.log('token: ' + currentToken)
+  } else {
+    // Show permission request UI
+    console.log('No registration token available. Request permission to generate one.');
+    // ...
+  }
+}).catch((err) => {
+  console.log('An error occurred while retrieving token. ', err);
+  // ...
+});
+
+</script>
+
 <template>
   <div id="app">
 		<PWAPrompt />
-    <MeasurementsTable />
-		<footer>
+    		<MeasurementsTable />
 		
-		</footer>
   </div>
 </template>
 
-<script>
-import MeasurementsTable from './components/MeasurementsTable.vue'
-import PWAPrompt from './components/PWAPrompt.vue'
 
-export default {
-  name: 'App',
-  components: {
-    MeasurementsTable,
-    PWAPrompt
-  }
-}
-</script>
 
 <style lang="scss">
 :root {
