@@ -227,6 +227,7 @@ getToken(messaging, {
 body {
 	font-family: "Urbanist", sans-serif;
 	background-color: var(--c-gray-400);
+	margin: 0px !important;
 }
 
 img {
