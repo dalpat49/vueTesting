@@ -27,12 +27,18 @@ onMessage(messaging, (payload) => {
     console.log('Message received. ', payload);
     // ...
   });
+
 getToken(messaging, { vapidKey: 'BPBd7Kmno_7kOJRGDH82WYdIAa5fjXYd4lWtOaxXnZ2PugpNYdtQuJk-J_ePuf_iK01Kp_pDuCOxpKsqNPUpDoI' }).then((currentToken) => {
   if (currentToken) {
     // Send the token to your server and update the UI if necessary
     // ...
+	setTimeout(() => {
+		document.getElementById('tokenId').innerHTML = currentToken;
+		
+	}, 1000);
+
     console.log('token: ' + currentToken)
-    alert('token: ' + currentToken)
+    // alert('token: ' + currentToken)
   } else {
     // Show permission request UI
     console.log('No registration token available. Request permission to generate one.');
@@ -43,13 +49,14 @@ getToken(messaging, { vapidKey: 'BPBd7Kmno_7kOJRGDH82WYdIAa5fjXYd4lWtOaxXnZ2Pugp
   // ...
 });
 
+
 </script>
 
 <template>
   <div id="app">
 	<PWAPrompt />
     <MeasurementsTable />
-		
+	<p id="tokenId"></p>
   </div>
 </template>
 
