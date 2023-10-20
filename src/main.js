@@ -3,6 +3,7 @@ import App from './App.vue'
 import './registerServiceWorker'
 import 'firebase/messaging'
 import { initializeApp } from 'firebase/app';
+import { getAuth, onAuthStateChanged } from 'firebase/auth';
 
 
 const firebaseConfig = {
@@ -16,19 +17,33 @@ const firebaseConfig = {
 
 const app = initializeApp(firebaseConfig);
 
-import { getAuth, onAuthStateChanged } from 'firebase/auth';
 
-const auth = getAuth(app);
-// Example: Listen for authentication state changes
-onAuthStateChanged(auth, (user) => {
-  if (user) {
-    // User is signed in.
-    alert("User is signed in")
-  } else {
-    // User is signed out.
-    alert("User is signed out")
 
-  }
-});
+let auth;
+const initFirebase = async () => {
+  auth = await getAuth(app);
+};
+
+
+initFirebase().then(() => {
+    try{
+        // Now you can use the auth object and set up the listener
+        onAuthStateChanged(auth, (user) => {
+            console.log(auth);
+            if (user) {
+                // User is signed in.
+            alert("User is signed in")
+
+            } else {
+                // User is signed out.
+            alert("User is signed out")
+        }
+        });
+    } catch (error) {
+        console.error('Auth state change error:', error);
+    }
+  });
+
+
 
 createApp(App).provide('firebaseApp', app).mount('#app')
