@@ -8,7 +8,7 @@ import { getAuth, onAuthStateChanged } from 'firebase/auth';
 
 const firebaseConfig = {
     apiKey: "AIzaSyCIty6mcdUJPR_VOSP5vCjWp5ZoDQbEqXw",
-    authDomain: "expense-tracker-66e12.firebaseapp.com",
+    authDomain: "https://hilarious-khapse-92f8b0.netlify.app/",
     projectId: "expense-tracker-66e12",
     storageBucket: "expense-tracker-66e12.appspot.com",
     messagingSenderId: "391391350134",
