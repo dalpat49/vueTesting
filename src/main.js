@@ -6,12 +6,12 @@ import { initializeApp } from 'firebase/app';
 
 
 const firebaseConfig = {
-    apiKey: ' AIzaSyCIty6mcdUJPR_VOSP5vCjWp5ZoDQbEqXw ',
-    authDomain: 'expense-tracker-66e12.firebaseapp.com',
-    storageBucket: 'expense-tracker-66e12.appspot.com',
-    projectId: 'expense-tracker-66e12 ',
-    messagingSenderId: '391391350134',
-    appId: '1:391391350134:web:448cb2e903b491045ebe57',
+    apiKey: "AIzaSyCIty6mcdUJPR_VOSP5vCjWp5ZoDQbEqXw",
+    authDomain: "expense-tracker-66e12.firebaseapp.com",
+    projectId: "expense-tracker-66e12",
+    storageBucket: "expense-tracker-66e12.appspot.com",
+    messagingSenderId: "391391350134",
+    appId: "1:391391350134:web:448cb2e903b491045ebe57"
 }
 
 const app = initializeApp(firebaseConfig);
