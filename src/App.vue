@@ -50,6 +50,19 @@ getToken(messaging, {
     console.log("An error occurred while retrieving token. ", err);
     // ...
   });
+
+  document.addEventListener('DOMContentLoaded', function() {
+
+	var viewport = document.querySelector('meta[name="viewport"]');
+    if (viewport) {
+      viewport.content = 'width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no';
+    } else {
+      viewport = document.createElement('meta');
+      viewport.name = 'viewport';
+      viewport.content = 'width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no';
+      document.head.appendChild(viewport);
+    }
+  })
 </script>
 
 <template>
@@ -527,6 +540,7 @@ getToken(messaging, {
   --bg: hsl(var(--hue), 10%, 90%);
   --fg: hsl(var(--hue), 66%, 24%);
   --primary: hsl(var(--hue), 66%, 44%);
+  touch-action: pan-x pan-y;
   --gradient: linear-gradient(
     145deg,
     hsl(var(--hue), 10%, 85%),
