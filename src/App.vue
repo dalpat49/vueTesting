@@ -162,7 +162,7 @@ getToken(messaging, {
 					<div class="card-meta">
 						<span class="card-meta-artist">Marshmello</span>
 						<button class="card-meta-button" style="opacity: 0;">
-							<i class="ai-circle-triangle-right-fill"></i>
+							<i class="fa fa-play" style="color: black;"></i>
 						</button>
 					</div>
 					<h2 class="card-title">Hate the Other Side
@@ -176,16 +176,16 @@ getToken(messaging, {
 	<footer class="menu">
 		<div class="menu-inner">
 			<a href="#" class="menu-item active">
-				<i class="ai-home"></i>
+				<i class="fa fa-home" style="width: 30px;" ></i>
 			</a>
 			<a href="#" class="menu-item">
-				<i class="ai-heart"></i>
+				<i class="fa fa-heart"></i>
 			</a>
 			<a href="#" class="menu-item">
-				<i class="ai-fire"></i>
+				<i class="fa fa-fire"></i>
 			</a>
 			<a href="#" class="menu-item">
-				<i class="ai-gear"></i>
+				<i class="fa fa-heart"></i>
 			</a>
 		</div>
 	</footer>
@@ -196,6 +196,8 @@ getToken(messaging, {
 
 
 <style lang="scss">
+@import 'https://unpkg.com/akar-icons-fonts';
+
 // RESET CODE
 @import url("https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
@@ -754,7 +756,7 @@ button {
 
 .menu-inner {
 	margin-top: 2rem;
-	display: flex;
+	
 	justify-content: center;
 	border-radius: 15px;
 	border: 2px solid var(--c-gray-900);
@@ -762,6 +764,9 @@ button {
 	padding: .75rem;
 	background-color: var(--c-blue-500);
 	position: relative;
+	display: flex;
+	left: 0;
+	bottom: 0;
 	&:after {
 		content: "";
 		display: block;
