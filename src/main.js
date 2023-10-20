@@ -6,7 +6,7 @@ import { initializeApp } from 'firebase/app';
 
 
 const firebaseConfig = {
-    apiKey: 'AAAAWyC-DXY:APA91bHNIzV4XLR4E4XnH-Ho2QIW0q14ljn85lX1cLueK-JrgA7Vm9cNVudoF3_ETPYF4-KRmAq-Bk2AzA-5Yd_hbCrTuCl5Xbkvdm-CEntzjgf11Lu_KbdxLj5MkRRBMVa08Orv2nYX',
+    apiKey: ' AIzaSyCIty6mcdUJPR_VOSP5vCjWp5ZoDQbEqXw ',
     authDomain: 'expense-tracker-66e12.firebaseapp.com',
     storageBucket: 'expense-tracker-66e12.appspot.com',
     projectId: 'expense-tracker-66e12 ',

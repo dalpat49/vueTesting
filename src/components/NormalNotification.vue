@@ -2,7 +2,7 @@
 <script setup>
 import { getMessaging, requestPermission } from 'firebase/messaging';
 import { onMessage } from 'firebase/messaging';
-tor.serviceWorker.register("service-worker.js");
+navigator.serviceWorker.register("service-worker.js");
 
 function showNotification() {
   Notification.requestPermission().then((result) => {
