@@ -226,7 +226,6 @@ getToken(messaging, {
 
 body {
 	font-family: "Urbanist", sans-serif;
-	min-height: 100vh;
 	background-color: var(--c-gray-400);
 }
 
