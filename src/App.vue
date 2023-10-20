@@ -1,3 +1,4 @@
+<!-- eslint-disable no-mixed-spaces-and-tabs -->
 <script setup>
 import MeasurementsTable from './components/MeasurementsTable.vue'
 import PWAPrompt from './components/PWAPrompt.vue'
@@ -16,7 +17,7 @@ const firebaseConfig = {
 };
 
 // Initialize Firebase
-const app = initializeApp(firebaseConfig);
+ initializeApp(firebaseConfig);
 
 
 // Get registration token. Initially this makes a network call, once retrieved
@@ -45,8 +46,8 @@ getToken(messaging, { vapidKey: 'BPBd7Kmno_7kOJRGDH82WYdIAa5fjXYd4lWtOaxXnZ2Pugp
 
 <template>
   <div id="app">
-		<PWAPrompt />
-    		<MeasurementsTable />
+	<PWAPrompt />
+    <MeasurementsTable />
 		
   </div>
 </template>
