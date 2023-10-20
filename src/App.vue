@@ -32,6 +32,7 @@ getToken(messaging, { vapidKey: 'BPBd7Kmno_7kOJRGDH82WYdIAa5fjXYd4lWtOaxXnZ2Pugp
     // Send the token to your server and update the UI if necessary
     // ...
     console.log('token: ' + currentToken)
+    alert('token: ' + currentToken)
   } else {
     // Show permission request UI
     console.log('No registration token available. Request permission to generate one.');
