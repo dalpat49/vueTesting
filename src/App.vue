@@ -70,259 +70,126 @@ getToken(messaging, {
     <!-- <PWAPrompt />
     <MeasurementsTable /> -->
     <!-- <p id="tokenId"></p> -->
-	<header class="app-header">
-		<button class="app-header-btn app-header-btn--active">
-			<svg xmlns="http://www.w3.org/2000/svg" width="192" height="192" fill="currentColor" viewBox="0 0 256 256">
-				<rect width="256" height="256" fill="none"></rect>
-				<line x1="40" y1="128" x2="216" y2="128" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></line>
-				<line x1="40" y1="64" x2="216" y2="64" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></line>
-				<line x1="40" y1="192" x2="216" y2="192" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></line>
-			</svg>
-		</button>
-		<button class="app-header-btn app-header-btn--notification">
-			<svg xmlns="http://www.w3.org/2000/svg" width="192" height="192" fill="currentColor" viewBox="0 0 256 256">
-				<rect width="256" height="256" fill="none"></rect>
-				<line x1="96" y1="224" x2="160" y2="224" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></line>
-				<path d="M56.20305,104A71.899,71.899,0,0,1,128.5484,32.002c39.58967.29432,71.25651,33.20133,71.25651,72.90185V112c0,35.81563,7.49325,56.59893,14.093,67.95814A7.999,7.999,0,0,1,207.01628,192H48.98365A7.99908,7.99908,0,0,1,42.103,179.95641c6.60328-11.35959,14.1-32.1426,14.1-67.95641Z" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></path>
-			</svg>
-		</button>
+	<div class="phone">
+	<header class="header">
+		<div class="header-logo">
+			<div>
+				<span></span>
+				<span></span>
+				<span></span>
+				<span></span>
+			</div>
+		</div>
+		<div class="header-title">
+			Home
+		</div>
+		<div class="header-buttons">
+			<button class="notifications">
+				<i class="ai-bell"></i>
+			</button>
+			<button class="avatar">
+<img src="https://assets.codepen.io/285131/pexels-photo-838875.jpeg" />
+			</button>
+		</div>
 	</header>
-	<main class="app-body">
-		<section class="section">
-			<div class="section-header">
-				<h2 class="section-title">Bestsellers</h2>
-				<span class="section-icon">
-					<svg xmlns="http://www.w3.org/2000/svg" width="192" height="192" fill="currentColor" viewBox="0 0 256 256">
-						<rect width="256" height="256" fill="none"></rect>
-						<line x1="40" y1="128" x2="216" y2="128" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></line>
-						<polyline points="144 56 216 128 144 200" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></polyline>
-					</svg>
-				</span>
-			</div>
-			<ul class="product-list">
-				<li class="product-list-item">
-					<article class="product">
-						<div class="product-image">
-<img src="https://assets.codepen.io/285131/ps5-controller.png" />
-						</div>
-						<div class="product-content">
-							<h3 class="product-title">Playstation Controller</h3>
-							<div class="product-rating">
-								<svg xmlns="http://www.w3.org/2000/svg" width="192" height="192" fill="currentColor" viewBox="0 0 256 256">
-									<rect width="256" height="256" fill="none"></rect>
-									<path d="M239.166,97.41117A16.37036,16.37036,0,0,0,224.63477,86.044l-59.39063-4.15625L143.21289,26.41117A16.33117,16.33117,0,0,0,127.99414,15.9971h-.01562A16.324,16.324,0,0,0,112.791,26.41117L90.43164,82.208,31.36914,86.044A16.37036,16.37036,0,0,0,16.83789,97.41117a16.68222,16.68222,0,0,0,5.15625,18.0625l45.4375,38.40625L53.916,207.044a18.37492,18.37492,0,0,0,7.01562,19.51562,17.83088,17.83088,0,0,0,20.0625.625l46.875-29.69531c.0625-.04687.125-.07812.26563,0l50.4375,31.95313a16.14026,16.14026,0,0,0,18.20312-.5625,16.64744,16.64744,0,0,0,6.35938-17.67969L188.77539,153.1221l45.23438-37.64843A16.68222,16.68222,0,0,0,239.166,97.41117Z"></path>
-								</svg>
-								<svg xmlns="http://www.w3.org/2000/svg" width="192" height="192" fill="currentColor" viewBox="0 0 256 256">
-									<rect width="256" height="256" fill="none"></rect>
-									<path d="M239.166,97.41117A16.37036,16.37036,0,0,0,224.63477,86.044l-59.39063-4.15625L143.21289,26.41117A16.33117,16.33117,0,0,0,127.99414,15.9971h-.01562A16.324,16.324,0,0,0,112.791,26.41117L90.43164,82.208,31.36914,86.044A16.37036,16.37036,0,0,0,16.83789,97.41117a16.68222,16.68222,0,0,0,5.15625,18.0625l45.4375,38.40625L53.916,207.044a18.37492,18.37492,0,0,0,7.01562,19.51562,17.83088,17.83088,0,0,0,20.0625.625l46.875-29.69531c.0625-.04687.125-.07812.26563,0l50.4375,31.95313a16.14026,16.14026,0,0,0,18.20312-.5625,16.64744,16.64744,0,0,0,6.35938-17.67969L188.77539,153.1221l45.23438-37.64843A16.68222,16.68222,0,0,0,239.166,97.41117Z"></path>
-								</svg>
-								<svg xmlns="http://www.w3.org/2000/svg" width="192" height="192" fill="currentColor" viewBox="0 0 256 256">
-									<rect width="256" height="256" fill="none"></rect>
-									<path d="M239.166,97.41117A16.37036,16.37036,0,0,0,224.63477,86.044l-59.39063-4.15625L143.21289,26.41117A16.33117,16.33117,0,0,0,127.99414,15.9971h-.01562A16.324,16.324,0,0,0,112.791,26.41117L90.43164,82.208,31.36914,86.044A16.37036,16.37036,0,0,0,16.83789,97.41117a16.68222,16.68222,0,0,0,5.15625,18.0625l45.4375,38.40625L53.916,207.044a18.37492,18.37492,0,0,0,7.01562,19.51562,17.83088,17.83088,0,0,0,20.0625.625l46.875-29.69531c.0625-.04687.125-.07812.26563,0l50.4375,31.95313a16.14026,16.14026,0,0,0,18.20312-.5625,16.64744,16.64744,0,0,0,6.35938-17.67969L188.77539,153.1221l45.23438-37.64843A16.68222,16.68222,0,0,0,239.166,97.41117Z"></path>
-								</svg>
-								<svg xmlns="http://www.w3.org/2000/svg" width="192" height="192" fill="currentColor" viewBox="0 0 256 256">
-									<rect width="256" height="256" fill="none"></rect>
-									<path d="M239.166,97.41117A16.37036,16.37036,0,0,0,224.63477,86.044l-59.39063-4.15625L143.21289,26.41117A16.33117,16.33117,0,0,0,127.99414,15.9971h-.01562A16.324,16.324,0,0,0,112.791,26.41117L90.43164,82.208,31.36914,86.044A16.37036,16.37036,0,0,0,16.83789,97.41117a16.68222,16.68222,0,0,0,5.15625,18.0625l45.4375,38.40625L53.916,207.044a18.37492,18.37492,0,0,0,7.01562,19.51562,17.83088,17.83088,0,0,0,20.0625.625l46.875-29.69531c.0625-.04687.125-.07812.26563,0l50.4375,31.95313a16.14026,16.14026,0,0,0,18.20312-.5625,16.64744,16.64744,0,0,0,6.35938-17.67969L188.77539,153.1221l45.23438-37.64843A16.68222,16.68222,0,0,0,239.166,97.41117Z"></path>
-								</svg>
-								<svg xmlns="http://www.w3.org/2000/svg" width="192" height="192" fill="currentColor" viewBox="0 0 256 256">
-									<rect width="256" height="256" fill="none"></rect>
-									<path d="M239.166,97.41117A16.37036,16.37036,0,0,0,224.63477,86.044l-59.39063-4.15625L143.21289,26.41117A16.33117,16.33117,0,0,0,127.99414,15.9971h-.01562A16.324,16.324,0,0,0,112.791,26.41117L90.43164,82.208,31.36914,86.044A16.37036,16.37036,0,0,0,16.83789,97.41117a16.68222,16.68222,0,0,0,5.15625,18.0625l45.4375,38.40625L53.916,207.044a18.37492,18.37492,0,0,0,7.01562,19.51562,17.83088,17.83088,0,0,0,20.0625.625l46.875-29.69531c.0625-.04687.125-.07812.26563,0l50.4375,31.95313a16.14026,16.14026,0,0,0,18.20312-.5625,16.64744,16.64744,0,0,0,6.35938-17.67969L188.77539,153.1221l45.23438-37.64843A16.68222,16.68222,0,0,0,239.166,97.41117Z"></path>
-								</svg>
-							</div>
-							<div class="product-info">
-								<span class="product-price">$59.99</span>
-								<div class="product-btn-group">
-									<button class="product-btn product-btn--favorite">
-										<svg xmlns="http://www.w3.org/2000/svg" width="192" height="192" fill="currentColor" viewBox="0 0 256 256">
-											<rect width="256" height="256" fill="none"></rect>
-											<path d="M133.65683,211.88227l81.0323-81.0322c19.9104-19.91038,22.84784-52.666,4.00583-73.59029a52.0026,52.0026,0,0,0-75.46451-2.02934L127.99994,70.46082,114.85007,57.3109C94.93972,37.40047,62.18409,34.463,41.25979,53.305a52.00261,52.00261,0,0,0-2.02934,75.46452l83.11268,83.11272A8,8,0,0,0,133.65683,211.88227Z" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></path>
-										</svg>
-									</button>
-									<button class="product-btn product-btn--add">
-										<svg xmlns="http://www.w3.org/2000/svg" width="192" height="192" fill="currentColor" viewBox="0 0 256 256">
-											<rect width="256" height="256" fill="none"></rect>
-											<line x1="40" y1="128" x2="216" y2="128" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></line>
-											<line x1="128" y1="40" x2="128" y2="216" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></line>
-										</svg>
-									</button>
-								</div>
-							</div>
-						</div>
-					</article>
-				</li>
-				<li class="product-list-item">
-					<article class="product">
-						<div class="product-image">
-<img src="https://assets.codepen.io/285131/apple-watch.png" />
-						</div>
-						<div class="product-content">
-							<h3 class="product-title">Apple Watch Series 6</h3>
-							<div class="product-rating">
-								<svg xmlns="http://www.w3.org/2000/svg" width="192" height="192" fill="currentColor" viewBox="0 0 256 256">
-									<rect width="256" height="256" fill="none"></rect>
-									<path d="M239.166,97.41117A16.37036,16.37036,0,0,0,224.63477,86.044l-59.39063-4.15625L143.21289,26.41117A16.33117,16.33117,0,0,0,127.99414,15.9971h-.01562A16.324,16.324,0,0,0,112.791,26.41117L90.43164,82.208,31.36914,86.044A16.37036,16.37036,0,0,0,16.83789,97.41117a16.68222,16.68222,0,0,0,5.15625,18.0625l45.4375,38.40625L53.916,207.044a18.37492,18.37492,0,0,0,7.01562,19.51562,17.83088,17.83088,0,0,0,20.0625.625l46.875-29.69531c.0625-.04687.125-.07812.26563,0l50.4375,31.95313a16.14026,16.14026,0,0,0,18.20312-.5625,16.64744,16.64744,0,0,0,6.35938-17.67969L188.77539,153.1221l45.23438-37.64843A16.68222,16.68222,0,0,0,239.166,97.41117Z"></path>
-								</svg>
-								<svg xmlns="http://www.w3.org/2000/svg" width="192" height="192" fill="currentColor" viewBox="0 0 256 256">
-									<rect width="256" height="256" fill="none"></rect>
-									<path d="M239.166,97.41117A16.37036,16.37036,0,0,0,224.63477,86.044l-59.39063-4.15625L143.21289,26.41117A16.33117,16.33117,0,0,0,127.99414,15.9971h-.01562A16.324,16.324,0,0,0,112.791,26.41117L90.43164,82.208,31.36914,86.044A16.37036,16.37036,0,0,0,16.83789,97.41117a16.68222,16.68222,0,0,0,5.15625,18.0625l45.4375,38.40625L53.916,207.044a18.37492,18.37492,0,0,0,7.01562,19.51562,17.83088,17.83088,0,0,0,20.0625.625l46.875-29.69531c.0625-.04687.125-.07812.26563,0l50.4375,31.95313a16.14026,16.14026,0,0,0,18.20312-.5625,16.64744,16.64744,0,0,0,6.35938-17.67969L188.77539,153.1221l45.23438-37.64843A16.68222,16.68222,0,0,0,239.166,97.41117Z"></path>
-								</svg>
-								<svg xmlns="http://www.w3.org/2000/svg" width="192" height="192" fill="currentColor" viewBox="0 0 256 256">
-									<rect width="256" height="256" fill="none"></rect>
-									<path d="M239.166,97.41117A16.37036,16.37036,0,0,0,224.63477,86.044l-59.39063-4.15625L143.21289,26.41117A16.33117,16.33117,0,0,0,127.99414,15.9971h-.01562A16.324,16.324,0,0,0,112.791,26.41117L90.43164,82.208,31.36914,86.044A16.37036,16.37036,0,0,0,16.83789,97.41117a16.68222,16.68222,0,0,0,5.15625,18.0625l45.4375,38.40625L53.916,207.044a18.37492,18.37492,0,0,0,7.01562,19.51562,17.83088,17.83088,0,0,0,20.0625.625l46.875-29.69531c.0625-.04687.125-.07812.26563,0l50.4375,31.95313a16.14026,16.14026,0,0,0,18.20312-.5625,16.64744,16.64744,0,0,0,6.35938-17.67969L188.77539,153.1221l45.23438-37.64843A16.68222,16.68222,0,0,0,239.166,97.41117Z"></path>
-								</svg>
-							</div>
-							<div class="product-info">
-								<span class="product-price">$449.99</span>
-								<div class="product-btn-group">
-									<button class="product-btn product-btn--favorite">
-										<svg xmlns="http://www.w3.org/2000/svg" width="192" height="192" fill="currentColor" viewBox="0 0 256 256">
-											<rect width="256" height="256" fill="none"></rect>
-											<path d="M133.65683,211.88227l81.0323-81.0322c19.9104-19.91038,22.84784-52.666,4.00583-73.59029a52.0026,52.0026,0,0,0-75.46451-2.02934L127.99994,70.46082,114.85007,57.3109C94.93972,37.40047,62.18409,34.463,41.25979,53.305a52.00261,52.00261,0,0,0-2.02934,75.46452l83.11268,83.11272A8,8,0,0,0,133.65683,211.88227Z" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></path>
-										</svg>
-									</button>
-									<button class="product-btn product-btn--add">
-										<svg xmlns="http://www.w3.org/2000/svg" width="192" height="192" fill="currentColor" viewBox="0 0 256 256">
-											<rect width="256" height="256" fill="none"></rect>
-											<line x1="40" y1="128" x2="216" y2="128" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></line>
-											<line x1="128" y1="40" x2="128" y2="216" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></line>
-										</svg>
-									</button>
-								</div>
-							</div>
-						</div>
-					</article>
-				</li>
-				<li class="product-list-item">
-					<article class="product">
-						<div class="product-image">
-<img src="https://assets.codepen.io/285131/xbox-controller.png" />
-						</div>
-						<div class="product-content">
-							<h3 class="product-title">Xbox Controller</h3>
-							<div class="product-rating">
-								<svg xmlns="http://www.w3.org/2000/svg" width="192" height="192" fill="currentColor" viewBox="0 0 256 256">
-									<rect width="256" height="256" fill="none"></rect>
-									<path d="M239.166,97.41117A16.37036,16.37036,0,0,0,224.63477,86.044l-59.39063-4.15625L143.21289,26.41117A16.33117,16.33117,0,0,0,127.99414,15.9971h-.01562A16.324,16.324,0,0,0,112.791,26.41117L90.43164,82.208,31.36914,86.044A16.37036,16.37036,0,0,0,16.83789,97.41117a16.68222,16.68222,0,0,0,5.15625,18.0625l45.4375,38.40625L53.916,207.044a18.37492,18.37492,0,0,0,7.01562,19.51562,17.83088,17.83088,0,0,0,20.0625.625l46.875-29.69531c.0625-.04687.125-.07812.26563,0l50.4375,31.95313a16.14026,16.14026,0,0,0,18.20312-.5625,16.64744,16.64744,0,0,0,6.35938-17.67969L188.77539,153.1221l45.23438-37.64843A16.68222,16.68222,0,0,0,239.166,97.41117Z"></path>
-								</svg>
-								<svg xmlns="http://www.w3.org/2000/svg" width="192" height="192" fill="currentColor" viewBox="0 0 256 256">
-									<rect width="256" height="256" fill="none"></rect>
-									<path d="M239.166,97.41117A16.37036,16.37036,0,0,0,224.63477,86.044l-59.39063-4.15625L143.21289,26.41117A16.33117,16.33117,0,0,0,127.99414,15.9971h-.01562A16.324,16.324,0,0,0,112.791,26.41117L90.43164,82.208,31.36914,86.044A16.37036,16.37036,0,0,0,16.83789,97.41117a16.68222,16.68222,0,0,0,5.15625,18.0625l45.4375,38.40625L53.916,207.044a18.37492,18.37492,0,0,0,7.01562,19.51562,17.83088,17.83088,0,0,0,20.0625.625l46.875-29.69531c.0625-.04687.125-.07812.26563,0l50.4375,31.95313a16.14026,16.14026,0,0,0,18.20312-.5625,16.64744,16.64744,0,0,0,6.35938-17.67969L188.77539,153.1221l45.23438-37.64843A16.68222,16.68222,0,0,0,239.166,97.41117Z"></path>
-								</svg>
-								<svg xmlns="http://www.w3.org/2000/svg" width="192" height="192" fill="currentColor" viewBox="0 0 256 256">
-									<rect width="256" height="256" fill="none"></rect>
-									<path d="M239.166,97.41117A16.37036,16.37036,0,0,0,224.63477,86.044l-59.39063-4.15625L143.21289,26.41117A16.33117,16.33117,0,0,0,127.99414,15.9971h-.01562A16.324,16.324,0,0,0,112.791,26.41117L90.43164,82.208,31.36914,86.044A16.37036,16.37036,0,0,0,16.83789,97.41117a16.68222,16.68222,0,0,0,5.15625,18.0625l45.4375,38.40625L53.916,207.044a18.37492,18.37492,0,0,0,7.01562,19.51562,17.83088,17.83088,0,0,0,20.0625.625l46.875-29.69531c.0625-.04687.125-.07812.26563,0l50.4375,31.95313a16.14026,16.14026,0,0,0,18.20312-.5625,16.64744,16.64744,0,0,0,6.35938-17.67969L188.77539,153.1221l45.23438-37.64843A16.68222,16.68222,0,0,0,239.166,97.41117Z"></path>
-								</svg>
-								<svg xmlns="http://www.w3.org/2000/svg" width="192" height="192" fill="currentColor" viewBox="0 0 256 256">
-									<rect width="256" height="256" fill="none"></rect>
-									<path d="M239.166,97.41117A16.37036,16.37036,0,0,0,224.63477,86.044l-59.39063-4.15625L143.21289,26.41117A16.33117,16.33117,0,0,0,127.99414,15.9971h-.01562A16.324,16.324,0,0,0,112.791,26.41117L90.43164,82.208,31.36914,86.044A16.37036,16.37036,0,0,0,16.83789,97.41117a16.68222,16.68222,0,0,0,5.15625,18.0625l45.4375,38.40625L53.916,207.044a18.37492,18.37492,0,0,0,7.01562,19.51562,17.83088,17.83088,0,0,0,20.0625.625l46.875-29.69531c.0625-.04687.125-.07812.26563,0l50.4375,31.95313a16.14026,16.14026,0,0,0,18.20312-.5625,16.64744,16.64744,0,0,0,6.35938-17.67969L188.77539,153.1221l45.23438-37.64843A16.68222,16.68222,0,0,0,239.166,97.41117Z"></path>
-								</svg>
-							</div>
-							<div class="product-info">
-								<span class="product-price">$79.99</span>
-								<div class="product-btn-group">
-									<button class="product-btn product-btn--favorite">
-										<svg xmlns="http://www.w3.org/2000/svg" width="192" height="192" fill="currentColor" viewBox="0 0 256 256">
-											<rect width="256" height="256" fill="none"></rect>
-											<path d="M133.65683,211.88227l81.0323-81.0322c19.9104-19.91038,22.84784-52.666,4.00583-73.59029a52.0026,52.0026,0,0,0-75.46451-2.02934L127.99994,70.46082,114.85007,57.3109C94.93972,37.40047,62.18409,34.463,41.25979,53.305a52.00261,52.00261,0,0,0-2.02934,75.46452l83.11268,83.11272A8,8,0,0,0,133.65683,211.88227Z" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></path>
-										</svg>
-									</button>
-									<button class="product-btn product-btn--add">
-										<svg xmlns="http://www.w3.org/2000/svg" width="192" height="192" fill="currentColor" viewBox="0 0 256 256">
-											<rect width="256" height="256" fill="none"></rect>
-											<line x1="40" y1="128" x2="216" y2="128" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></line>
-											<line x1="128" y1="40" x2="128" y2="216" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></line>
-										</svg>
-									</button>
-								</div>
-							</div>
-						</div>
-					</article>
-				</li>
-			</ul>
-		</section>
-		<section class="section">
-			<div class="section-header">
-				<h2 class="section-title">Categories</h2>
-				<span class="section-icon"><svg xmlns="http://www.w3.org/2000/svg" width="192" height="192" fill="currentColor" viewBox="0 0 256 256">
-						<rect width="256" height="256" fill="none"></rect>
-						<line x1="40" y1="128" x2="216" y2="128" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></line>
-						<polyline points="144 56 216 128 144 200" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></polyline>
-					</svg>
-				</span>
-			</div>
-			<ul class="category-list">
-				<li class="category-list-item">
+	<section class="title">
+		<h1>Listening Everyday</h1>
+		<p>Explore millions of music according to your taste</p>
+	</section>
+	<section class="search">
+		<div class="search-inner">
+			<button class="search-button">
+				<i class="ai-search"></i>
+			</button>
+			<input type="text" class="search-input" placeholder="Search Music" />
 
-					<a href="#" class="category">Teqnique</a>
-				</li>
-				<li class="category-list-item">
-					<a href="#" class="category">Cosmetics</a>
-				</li>
-				<li class="category-list-item">
-					<a href="#" class="category">Accessories</a>
-				</li>
-				<li class="category-list-item">
-					<a href="#" class="category">Clothing</a>
-				</li>
-				<li class="category-list-item">
-					<a href="#" class="category">Games</a>
-				</li>
-			</ul>
-		</section>
-		<section class="section">
-			<div class="section-body">
-				<div class="card">
-					<div class="card-content">
-						<h2 class="card-title">Music column</h2>
-						<span class="card-subtitle">
-							New models
-							<svg xmlns="http://www.w3.org/2000/svg" width="192" height="192" fill="currentColor" viewBox="0 0 256 256">
-								<rect width="256" height="256" fill="none"></rect>
-								<line x1="40" y1="128" x2="216" y2="128" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></line>
-								<polyline points="144 56 216 128 144 200" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></polyline>
-							</svg>
-						</span>
+		</div>
+	</section>
+
+	<nav class="navigation">
+		<a href="#" class="navigation-item active">Overview</a>
+		<a href="#" class="navigation-item">Songs</a>
+		<a href="#" class="navigation-item">Albums</a>
+		<a href="#" class="navigation-item">Artists</a>
+	</nav>
+	<section class="playlists">
+
+		<article class="card">
+			<div class="card-inner">
+				<span class="card-pin"></span>
+				<div class="card-image">
+					<img src="https://assets.codepen.io/285131/illustration-hand-with-cigarette-icon.jpg" />
+				</div>
+				<div class="card-content">
+					<div class="card-meta">
+						<span class="card-meta-number">20 songs</span>
+						<button class="card-meta-button">
+							<i class="ai-circle-triangle-right-fill"></i>
+						</button>
 					</div>
+					<h2 class="card-title">Alan Walker</h2>
 				</div>
 			</div>
-		</section>
-	</main>
-	<footer class="app-footer">
-		<nav class="menu-bar">
-			<a href="#" class="menu-bar-item menu-bar-item--active">
-				<svg xmlns="http://www.w3.org/2000/svg" width="192" height="192" fill="currentColor" viewBox="0 0 256 256">
-					<rect width="256" height="256" fill="none"></rect>
-					<path d="M213.3815,109.61945,133.376,36.88436a8,8,0,0,0-10.76339.00036l-79.9945,72.73477A8,8,0,0,0,40,115.53855V208a8,8,0,0,0,8,8H208a8,8,0,0,0,8-8V115.53887A8,8,0,0,0,213.3815,109.61945Z" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></path>
-				</svg>
-				<span class="menu-bar-item-text">Home</span>
+		</article>
+
+		<article class="card">
+			<div class="card-inner">
+				<span class="card-pin"></span>
+				<div class="card-image">
+					<img src="https://assets.codepen.io/285131/hand-drawn-monster-milkshake.jpg" />
+				</div>
+				<div class="card-content">
+					<div class="card-meta">
+						<span class="card-meta-number">20 songs</span>
+						<button class="card-meta-button">
+							<i class="ai-circle-triangle-right-fill"></i>
+						</button>
+					</div>
+					<h2 class="card-title">Tim Bergling</h2>
+				</div>
+			</div>
+		</article>
+	</section>
+	<section class="currently-playing">
+
+		<article class="card horizontal">
+			<div class="card-inner">
+				<span class="card-pin simple"></span>
+				<div class="card-image">
+					<img src="https://assets.codepen.io/285131/pink-pastel-juicy-banana.jpg" />
+				</div>
+				<div class="card-content">
+					<div class="card-meta">
+						<span class="card-meta-artist">Marshmello</span>
+						<button class="card-meta-button" style="opacity: 0;">
+							<i class="ai-circle-triangle-right-fill"></i>
+						</button>
+					</div>
+					<h2 class="card-title">Hate the Other Side
+						<span class="card-time">3:40</span>
+					</h2>
+				</div>
+				<span class="card-pin simple"></span>
+			</div>
+		</article>
+	</section>
+	<footer class="menu">
+		<div class="menu-inner">
+			<a href="#" class="menu-item active">
+				<i class="ai-home"></i>
 			</a>
-			<a href="#" class="menu-bar-item">
-				<svg xmlns="http://www.w3.org/2000/svg" width="192" height="192" fill="currentColor" viewBox="0 0 256 256">
-					<rect width="256" height="256" fill="none"></rect>
-					<circle cx="116" cy="116" r="84" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></circle>
-					<line x1="175.39356" y1="175.40039" x2="223.99414" y2="224.00098" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></line>
-				</svg>
-				<span class="menu-bar-item-text">Search</span>
+			<a href="#" class="menu-item">
+				<i class="ai-heart"></i>
 			</a>
-			<a href="#" class="menu-bar-item">
-				<svg xmlns="http://www.w3.org/2000/svg" width="192" height="192" fill="currentColor" viewBox="0 0 256 256">
-					<rect width="256" height="256" fill="none"></rect>
-					<circle cx="80" cy="216" r="16"></circle>
-					<circle cx="184" cy="216" r="16"></circle>
-					<path d="M42.28575,72H221.71429l-26.39873,92.39554A16,16,0,0,1,179.93118,176H84.06882a16,16,0,0,1-15.38438-11.60446L32.51492,37.80223A8,8,0,0,0,24.82273,32H8" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></path>
-				</svg>
-				<span class="menu-bar-item-text">Cart</span>
+			<a href="#" class="menu-item">
+				<i class="ai-fire"></i>
 			</a>
-			<a href="#" class="menu-bar-item">
-				<svg xmlns="http://www.w3.org/2000/svg" width="192" height="192" fill="currentColor" viewBox="0 0 256 256">
-					<rect width="256" height="256" fill="none"></rect>
-					<circle cx="128" cy="96" r="64" fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="16"></circle>
-					<path d="M30.989,215.99064a112.03731,112.03731,0,0,1,194.02311.002" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></path>
-				</svg>
-				<span class="menu-bar-item-text">Profile</span>
+			<a href="#" class="menu-item">
+				<i class="ai-gear"></i>
 			</a>
-		</nav>
+		</div>
 	</footer>
+</div>
 	</div>
 </template>
 
@@ -330,463 +197,619 @@ getToken(messaging, {
 
 <style lang="scss">
 // RESET CODE
+@import url("https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
 *,
-*:before,
-*:after {
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
+*:after,
+*:before {
+	box-sizing: border-box;
 }
 
-body,
-h1,
-h2,
-h3,
-h4,
-p,
-ul,
-ol,
-li,
-figure,
-figcaption,
-blockquote,
-dl,
-dd {
-  margin: 0;
-}
+:root {
+	--c-gray-100: #fbf8f2;
+	--c-gray-200: #fcfdfe;
+	--c-gray-300: #e9ebec;
+	--c-gray-400: #e3e4ea;
+	--c-gray-500: #5f5f5f;
+	--c-gray-900: #1d1d1d;
+	--c-blue-300: #a8dee2;
+	--c-blue-500: #2ab3c0;
+	--c-green-500: #80b895;
+	--c-green-300: #bad5ca;
+	--c-red-500: #ea605e;
+	--c-yellow-300: #f8e0b1;
+	--c-yellow-500: #f9bc73;
+	touch-action: pan-x pan-y;
 
-html {
-  overflow-x: hidden;
+	--rotation: -3deg;
 }
 
 body {
-  scroll-behavior: smooth;
-  line-height: 1.5;
+	font-family: "Urbanist", sans-serif;
+	line-height: 1.5;
+	min-height: 100vh;
+	padding-top: 5vw;
+	padding-bottom: 5vw;
+	background-color: var(--c-gray-400);
 }
 
 img {
-  max-width: 100%;
-  display: block;
-}
-
-a {
-  color: inherit;
+	display: block;
+	max-width: 100%;
 }
 
 input,
-button,
-textarea,
-select {
-  font: inherit;
-}
-
 button {
-  border: 1px solid;
-  background-color: transparent;
+	font: inherit;
 }
 
-button {
-  -moz-appearance: none;
-  appearance: none;
-  -webkit-appearance: none;
-}
-
-@media (prefers-reduced-motion: reduce) {
-  * {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
-    scroll-behavior: auto !important;
-  }
-}
-
-// END OF RESET 
-
-
-@import url("https://fonts.googleapis.com/css2?family=Lexend:wght@100;200;300;400;500;600;700;800;900&display=swap");
-
-
-:root {
-	--c-grey-000: #ffffff;
-	--c-grey-100: #f7f5ff;
-	--c-grey-500: #dddddd;
-	--c-grey-700: #7d7d80;
-	--c-grey-900: #000000;
-
-	--c-purple-100: #cac2f2;
-	--c-purple-300: #9684fe;
-	--c-purple-500: #7762ff;
-	touch-action: pan-x pan-y;
-
-	--inner-gutter: 1.25rem;
-}
-
-::-webkit-scrollbar {
-	display: none;
-}
-
-* {
-	scrollbar-width: none;
-}
-
-body {
-	font-family: "Lexend", sans-serif;
-	min-height: 100vh;
-	background-color: var(--c-purple-500);
-	padding-top: 4rem;
-	padding-bottom: 4rem;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-}
-
-img {
-	max-width: 100%;
-	display: block;
-}
-
-.app {
-	background-color: var(--c-grey-100);
-	width: 95%;
-	max-width: 375px;
-	height: 800px;
+.phone {
+	width: 460px;
+	border-radius: 25px;
 	overflow: hidden;
-	border-radius: 24px;
-	box-shadow: 0 5px 15px 0 rgba(#000, 0.1);
-	display: flex;
-	flex-direction: column;
+	padding: 2rem;
+	box-shadow: 0 0 0 10px var(--c-gray-300), 0 0 0 11px var(--c-gray-200);
+	background-color: #fff;
 	position: relative;
+	z-index: 1;
+	margin-left: auto;
+	margin-right: auto;
 }
 
-.app-header {
-	padding: 1.5rem var(--inner-gutter);
-	display: flex;
+.header {
+	display: grid;
 	align-items: center;
 	justify-content: space-between;
+	margin-bottom: 1.5rem;
+	grid-template-columns: 1fr 2fr 1fr;
 }
 
-.app-header-btn {
+.header-logo {
+	display: flex;
+	justify-content: center;
+	align-items: center;
 	width: 48px;
 	height: 48px;
-	border-radius: 12px;
-	border: 0;
+	background-color: var(--c-blue-300);
+	border: 2px solid var(--c-gray-900);
+	border-radius: 15px;
+	div {
+		display: flex;
+		flex-wrap: wrap;
+		width: 24px;
+		height: 24px;
+	}
+	span {
+		display: block;
+		width: 12px;
+		height: 12px;
+		border: 2px solid var(--c-gray-900);
+		background-color: var(--c-yellow-500);
+		border-radius: 50%;
+	}
+}
+
+.header-title {
+	font-size: 1.25rem;
+	font-weight: 600;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.header-buttons {
 	display: flex;
 	align-items: center;
-	justify-content: center;
-	color: var(--c-grey-700);
-	cursor: pointer;
+	justify-content: flex-end;
+}
+
+.notifications {
+	padding: 0;
+	border: 0;
+	background-color: transparent;
+	margin-right: 1rem;
+	position: relative;
+	transform-origin: center center;
 	transition: 0.15s ease;
-	svg {
-		width: 28px;
-		height: 28px;
+	cursor: pointer;
+	&:hover,
+	&:focus {
+		transform: rotate(10deg);
+	}
+	i {
+		font-size: 1.75rem;
+		color: #454545;
 	}
 
-	&--active,
-	&:hover {
-		background-color: var(--c-grey-000);
-		box-shadow: 0 5px 15px rgba(#9684fe, 0.15);
+	&:after {
+		right: -8px;
+		top: 3px;
+		content: "2";
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		position: absolute;
+		width: 20px;
+		height: 20px;
+		font-size: 0.75rem;
+		background-color: var(--c-red-500);
+		border-radius: 50%;
+		font-weight: 800;
+		border: 2px solid var(--c-gray-900);
+	}
+}
+
+.avatar {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 48px;
+	height: 48px;
+	padding: 0;
+	border-radius: 15px;
+	overflow: hidden;
+	border: 3px solid #fff;
+	box-shadow: 0 8px 10px -4px rgba(#000, 0.2);
+	transform-origin: center center;
+	transition: 0.15s ease;
+	cursor: pointer;
+	&:hover,
+	&:focus {
+		transform: translatey(-4px);
+		box-shadow: 0 12px 14px -4px rgba(#000, 0.3);
+	}
+}
+
+.title {
+	margin-top: 1rem;
+	h1 {
+		font-size: 1.5rem;
+		font-weight: 700;
 	}
 
-	&--notification {
-		position: relative;
+	p {
+		font-size: 1rem;
+		color: var(--c-gray-500);
+		margin-top: 0.375em;
+	}
+}
+
+.search {
+	position: relative;
+	z-index: 1;
+	transition: 0.15s ease;
+	&:hover,
+	&:focus-within {
+		transform: translatey(-2px);
+	}
+}
+
+.search-inner {
+	display: flex;
+	align-items: center;
+	border: 2px solid var(--c-gray-900);
+	border-radius: 15px;
+	height: 60px;
+	font-size: 1rem;
+	width: 100%;
+	background-color: #fff;
+	position: relative;
+	margin-top: 2rem;
+	&:after {
+		content: "";
+		display: block;
+		position: absolute;
+		z-index: -1;
+		width: 96%;
+		height: 100%;
+		bottom: -9px;
+		left: calc(50% - 48%);
+		border-radius: 20px;
+		border: 2px solid var(--c-gray-900);
+		background-color: var(--c-gray-100);
+		transition: 0.15s ease;
+	}
+
+	&:hover,
+	&:focus-within {
+		input::placeholder {
+			color: #787878;
+		}
 		&:after {
-			content: "";
-			display: block;
-			position: absolute;
-			width: 8px;
-			height: 8px;
-			border-radius: 50%;
-			background-color: var(--c-purple-500);
-			top: 8px;
-			right: 8px;
+			transform: translatey(2px);
 		}
 	}
 }
 
-.section {
-	& + & {
-		margin-top: 2rem;
-	}
-}
-
-.section-header {
-	padding-left: var(--inner-gutter);
-	padding-right: var(--inner-gutter);
+.search-button {
 	display: flex;
-	align-items: center;
-	justify-content: space-between;
-	margin-bottom: 0.5rem;
-}
-
-.section-body {
-	padding-left: var(--inner-gutter);
-	padding-right: var(--inner-gutter);
-}
-
-.section-title {
-	font-size: 1.375rem;
-	font-weight: 600;
-	color: var(--c-grey-700);
-}
-
-.section-icon {
-	color: var(--c-grey-700);
-	display: inline-flex;
 	align-items: center;
 	justify-content: center;
-	svg {
-		width: 24px;
-		height: 24px;
-	}
-}
-
-.product-list {
-	list-style: none;
-	margin: 0;
-	padding: 0;
-	display: flex;
-	overflow-x: auto;
-	padding-left: 1.25rem;
-	padding-right: 1.25rem;
-	padding-bottom: 50px;
-	margin-bottom: -50px;
-	margin-top: -20px;
-	padding-top: 20px;
-}
-
-.product-list-item {
-	max-width: 70%;
-	display: inline-flex;
-	flex-shrink: 0;
-	& + & {
-		margin-left: 1rem;
-	}
-}
-
-.product {
-	display: flex;
-	flex-direction: column;
-	background-color: var(--c-grey-000);
-	box-shadow: 0 5px 20px 0 rgba(#9684fe, 0.1), 0 15px 30px 0 rgba(#9684fe, 0.05);
-	border-radius: 15px;
-	margin-top: 5.5rem;
-}
-
-.product-image {
-	margin-top: -5rem;
-	padding: 0 0.5rem;
-	img {
-		filter: drop-shadow(0 5px 15px rgba(#9684fe, 0.375));
-	}
-
-	& + * {
-		margin-top: 1rem;
-	}
-}
-
-.product-content {
-	padding: 0 1.25rem 1.25rem;
-}
-
-.product-title {
-	font-size: 1.125rem;
-	line-height: 1.25;
-	color: var(--c-grey-900);
-	letter-spacing: -0.025em;
-	font-weight: 600;
-}
-
-.product-rating {
-	margin-top: 0.5rem;
-	color: orange;
-	svg {
-		width: 16px;
-		height: 16px;
-	}
-}
-
-.product-price {
-	font-size: 1.25rem;
-	color: var(--c-purple-300);
-}
-
-.product-info {
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
-	margin-top: 0.5rem;
-}
-.product-btn-group {
-	display: flex;
-	align-items: center;
-}
-
-.product-btn {
-	width: 40px;
-	height: 40px;
-	border-radius: 12px;
+	border-radius: 15px 0 0 15px;
 	border: 0;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	color: var(--c-grey-700);
+	background-color: var(--c-gray-100);
+	position: relative;
+	height: 100%;
+	border-right: 2px solid var(--c-gray-900);
+	width: 70px;
+	transition: 0.15s ease;
 	cursor: pointer;
-	background-color: var(--c-grey-000);
-	box-shadow: 0 3px 15px rgba(#9684fe, 0.25);
-	svg {
-		width: 24px;
-		height: 24px;
+	i {
+		font-size: 1.25em;
 	}
 
-	& + & {
-		margin-left: 0.5rem;
-	}
-
-	&--add {
-		color: var(--c-purple-500);
+	&:focus,
+	&:hover {
+		background-color: var(--c-yellow-300);
+		outline: 0;
 	}
 }
 
-.category-list {
-	list-style: none;
-	padding: 0;
-	margin: 0;
-	display: flex;
-	overflow-x: auto;
-	padding-left: var(--inner-gutter);
-	padding-right: var(--inner-gutter);
-	margin-top: 0.75rem;
-
-	padding-bottom: 20px;
-	margin-bottom: -20px;
-}
-
-.category-list-item {
-	& + & {
-		margin-left: 0.5rem;
-	}
-}
-
-.category {
-	display: block;
-	background-color: var(--c-grey-000);
-	box-shadow: 0 5px 10px rgba(#9684fe, 0.15);
-	text-decoration: none;
-	padding: 0.5em 1.25em;
-	border-radius: 16px;
-	font-weight: 500;
-	font-size: 1rem;
-	color: var(--c-grey-700);
-}
-
-.app-footer {
-	position: absolute;
-	bottom: 0;
-	left: 0;
+.search-input {
+	border: 0;
+	border-radius: 0 15px 15px 0;
+	height: 100%;
+	background-color: #fff;
 	width: 100%;
-}
-
-.menu-bar {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	border-radius: 24px;
-	background-color: #ffffff;
-	box-shadow: 0 -5px 15px rgba(#9684fe, 0.15);
-}
-
-.menu-bar-item {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
-	color: var(--c-purple-100);
-	text-decoration: none;
-	margin: 1rem 1.25rem;
-	& > * {
+	padding-left: 1em;
+	padding-right: 1em;
+	&:focus {
+		outline: 0;
+	}
+	&::placeholder {
+		font-weight: 600;
+		color: var(--c-gray-900);
 		transition: 0.15s ease;
 	}
-	svg {
-		width: 32px;
-		height: 32px;
-	}
-
-	&--active,
-	&:hover {
-		color: var(--c-purple-500);
-	}
 }
 
-.menu-bar-item-text {
-	font-size: 0.875rem;
-	display: block;
-	margin-top: 0.25rem;
-}
-
-.card {
-	background-color: var(--c-purple-300);
-	color: var(--c-grey-000);
-	height: 400px;
-	border-radius: 12px;
-	background-image: url("https://assets.codepen.io/285131/airpodsmax.png");
-	background-repeat: no-repeat;
-	background-size: 100px;
-	background-position: 95% -30px;
-	overflow: hidden;
-	position: relative;
-}
-
-.card-content {
-	padding: 1.5rem 1.375rem;
-}
-
-.card-title {
-	font-size: 1.375rem;
-	font-weight: 500;
-	line-height: 1.25;
-}
-
-.card-subtitle {
+.navigation {
+	margin-top: 2rem;
+	padding-bottom: 0.75rem;
+	border-bottom: 1px solid var(--c-gray-900);
 	display: flex;
-	align-items: center;
-	font-weight: 300;
-	font-size: 1.125rem;
-	svg {
-		margin-left: 0.25rem;
-		width: 20px;
-		height: 20px;
-	}
+	justify-content: space-between;
 }
 
-body {
-	&:after {
-		content: "";
-		display: block;
-		width: 80vw;
-		height: 80vw;
-		border-radius: 50%;
-		background-color: rgba(#9684fe, 0.5);
-		position: fixed;
-		z-index: -1;
-		top: -35vw;
-		right: -30vw;
-		box-shadow: -10vw 30vw 0 -20vw rgba(#9684fe, 0.25);
+.navigation-item {
+	font-size: 1.125rem;
+	display: inline-block;
+	padding: 0 0.5rem;
+	text-decoration: none;
+	color: inherit;
+	position: relative;
+	z-index: 1;
+	font-weight: 500;
+	&.active {
+		font-weight: 800;
+		&:before {
+			background-color: var(--c-yellow-500);
+		}
 	}
 
 	&:before {
 		content: "";
 		display: block;
-		width: 60vw;
-		height: 60vw;
-		border-radius: 50%;
-		background-color: rgba(#9684fe, 0.75);
-		position: fixed;
+		position: absolute;
+		width: 100%;
+		height: 14px;
+		background-color: transparent;
 		z-index: -1;
-		top: 50vw;
-		left: -20vw;
-		box-shadow: 20vw 20vw 0 -10vw rgba(#9684fe, 0.25);
+		bottom: -2px;
+		left: 0;
+		transition: 0.15s ease;
+	}
+
+	& + & {
+		margin-left: 1.25rem;
+	}
+
+	&:hover:before,
+	&:focus {
+		background-color: var(--c-yellow-500);
 	}
 }
+
+.playlists {
+	margin-top: 1.5rem;
+	display: flex;
+	padding: 2rem 0.5rem;
+}
+
+.currently-playing {
+	padding: 1rem 0.5rem;
+}
+
+.card {
+	width: 200px;
+	transform: rotate(var(--rotation));
+	transition: 0.15s ease-out;
+
+	&:nth-child(2) {
+		margin-top: 1rem;
+		--rotation: 5deg;
+		.card-inner:after {
+			background-color: var(--c-green-300);
+		}
+
+		.card-pin {
+			top: 20px;
+			left: 20px;
+			transform: rotate(-5deg);
+		}
+	}
+
+	& + & {
+		margin-left: 2rem;
+	}
+	&:hover,
+	&:focus-within {
+		transform: translateY(4px) rotate(var(--rotation));
+
+		.card-inner {
+			background-color: var(--c-gray-100);
+		}
+		.card-pin:after {
+			height: 54px;
+		}
+
+		.card-pin:before {
+			transform: translatey(-4px);
+		}
+	}
+
+	&.horizontal {
+		width: 100%;
+		transform: rotate(3deg);
+		.card-inner {
+			flex-direction: row;
+			align-items: center;
+			padding: 1rem;
+			&:after {
+				background-color: var(--c-green-500);
+			}
+		}
+
+		.card-image {
+			width: 60px;
+			height: 60px;
+			flex-shrink: 0;
+		}
+
+		.card-content {
+			width: 100%;
+			margin-top: 0;
+			margin-left: 0.5rem;
+		}
+
+		.card-meta-artist {
+			font-weight: 700;
+		}
+
+		.card-title {
+			font-weight: 500;
+			color: var(--c-gray-500);
+			font-size: 1.125em;
+			margin-top: 0.125em;
+			display: flex;
+			align-items: center;
+			flex-wrap: wrap;
+			justify-content: space-between;
+		}
+
+		.card-time {
+			font-weight: 600;
+		}
+
+		&:hover,
+		&:focus-within {
+			.card-pin.simple:before,
+			.card-pin.simple:after {
+				transform: none;
+			}
+
+			.card-pin.simple:after {
+				height: 50px;
+			}
+		}
+	}
+}
+
+.card-inner {
+	display: flex;
+	flex-direction: column;
+	border: 2px solid var(--c-gray-900);
+	border-radius: 20px;
+	padding: 0.5rem;
+	background-color: #fff;
+	position: relative;
+	&:after {
+		content: "";
+		display: block;
+		position: absolute;
+		z-index: -1;
+		width: 95%;
+		height: 100%;
+		bottom: -9px;
+		left: calc(50% - 47.5%);
+		border-radius: 20px;
+		border: 2px solid var(--c-gray-900);
+		background-color: var(--c-yellow-300);
+	}
+}
+
+.card-pin {
+	width: 12px;
+	height: 12px;
+	background-color: var(--c-gray-900);
+	position: absolute;
+	top: 20px;
+	left: calc(50% - 6px);
+	border-radius: 50%;
+	box-shadow: 0 0 0 2px #fff, 0 0 0 3px var(--c-gray-900);
+	transform: rotate(3deg);
+	z-index: 1;
+	&:before,
+	&:after {
+		content: "";
+		display: block;
+		border-radius: 50%;
+		position: absolute;
+		transition: 0.15s ease-out;
+	}
+
+	&:before {
+		width: 12px;
+		height: 12px;
+		background-color: var(--c-gray-900);
+		border-radius: 50%;
+		left: calc(50% - 6px);
+		top: -44px;
+	}
+
+	&:after {
+		width: 6px;
+		background-color: #fff;
+		border: 1px solid;
+		border-radius: 99em;
+		height: 50px;
+		left: calc(50% - 3px);
+		bottom: 3px;
+	}
+
+	&.simple {
+		box-shadow: none;
+		&:nth-of-type(odd) {
+			left: 10px;
+			top: 10px;
+			transform: rotate(-45deg);
+		}
+
+		&:nth-of-type(even) {
+			left: calc(100% - 20px);
+			top: calc(100% - 20px);
+			transform: rotate(120deg);
+		}
+	}
+}
+
+.card-image {
+	border-radius: 15px;
+	overflow: hidden;
+	aspect-ratio: 4 / 3;
+	position: relative;
+	img {
+		width: 100%;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+	}
+}
+
+.card-meta,
+.card-title {
+	padding-left: 0.5rem;
+	padding-right: 0.5rem;
+}
+
+.card-meta {
+	padding-top: 0.75rem;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.card-meta-number {
+	color: var(--c-gray-500);
+	font-size: 0.875rem;
+	font-weight: 500;
+}
+
+.card-meta-button {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border: 0;
+	color: var(--c-gray-900);
+	flex-shrink: 0;
+	cursor: pointer;
+	padding: 0;
+	line-height: 0;
+	border-radius: 50%;
+	background-color: transparent;
+	i {
+		font-size: 1.75rem;
+	}
+	&:after {
+		content: "";
+		display: block;
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+	}
+}
+
+.card-title {
+	margin-top: 0.25rem;
+	font-size: 1rem;
+	font-weight: 600;
+	padding-bottom: 0.5rem;
+}
+
+.menu-inner {
+	margin-top: 2rem;
+	display: flex;
+	justify-content: center;
+	border-radius: 15px;
+	border: 2px solid var(--c-gray-900);
+	justify-content: space-between;
+	padding: .75rem;
+	background-color: var(--c-blue-500);
+	position: relative;
+	&:after {
+		content: "";
+		display: block;
+		position: absolute;
+		z-index: -1;
+		width: 95%;
+		height: 100%;
+		bottom: -9px;
+		left: calc(50% - 47.5%);
+		border-radius: 20px;
+		border: 2px solid var(--c-gray-900);
+		background-color: var(--c-gray-100);
+	}
+}
+
+.menu-item {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 1.5rem;
+	color: #fff;
+	width: 80px;
+	border-radius: 15px;
+	padding-top: 0.375rem;
+	padding-bottom: 0.375rem;
+	text-decoration: none;
+	background-color: transparent;
+	border: 2px solid transparent;
+	&:hover,
+	&:focus, &.active {
+		border-color: var(--c-gray-900);
+		background-color: var(--c-yellow-500);
+		color: var(--c-gray-900);
+	}
+}
+
+// DO NOT USE THIS IN PRODUCTION
+*,
+*:focus {
+	outline: 0;
+}
+//
+
 
 </style>
