@@ -70,903 +70,723 @@ getToken(messaging, {
     <!-- <PWAPrompt />
     <MeasurementsTable /> -->
     <!-- <p id="tokenId"></p> -->
-    <svg class="app__gradients" hidden>
-      <defs>
-        <linearGradient id="ring" x1="1" y1="0" x2="0" y2="1">
-          <stop offset="0%" stop-color="hsl(184,66%,54%)" />
-          <stop offset="100%" stop-color="hsl(184,66%,34%)" />
-        </linearGradient>
-      </defs>
-    </svg>
-    <header class="header">
-      <button class="header__profile-btn" type="button">
-        <img
-          class="header__profile-icon"
-          alt="Profile (Mr. Trololo)"
-          src="https://i.ibb.co/B3hj9jv/mr-trololo-icon.png"
-          width="48"
-          height="48"
-        />
-      </button>
-      <button class="header__notes-btn" type="button" title="Notifications">
-        <svg
-          class="icon"
-          viewBox="0 0 24 24"
-          height="24"
-          width="24"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            d="M3 5C3 3.89543 3.89543 3 5 3H19C20.1046 3 21 3.89543 21 5V19C21 20.1046 20.1046 21 19 21H5C3.89543 21 3 20.1046 3 19V5ZM5 14V19H19V14H16.7208L15.9487 16.3162C15.8126 16.7246 15.4304 17 15 17H9C8.56957 17 8.18743 16.7246 8.05132 16.3162L7.27924 14H5ZM19 12V5H5V12H7.27924C8.1401 12 8.90438 12.5509 9.17661 13.3675L9.72076 15H14.2792L14.8234 13.3675C15.0956 12.5509 15.8599 12 16.7208 12H19Z"
-          />
-        </svg>
-      </button>
-    </header>
-    <main>
-      <div class="main__date-nav">
-        <button class="main__date-arrow-btn" type="button">
-          <svg
-            class="icon"
-            viewBox="0 0 24 24"
-            height="24"
-            width="24"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M14.7071 5.29289C15.0976 5.68342 15.0976 6.31658 14.7071 6.70711L9.41421 12L14.7071 17.2929C15.0976 17.6834 15.0976 18.3166 14.7071 18.7071C14.3166 19.0976 13.6834 19.0976 13.2929 18.7071L7.29289 12.7071C6.90237 12.3166 6.90237 11.6834 7.29289 11.2929L13.2929 5.29289C13.6834 4.90237 14.3166 4.90237 14.7071 5.29289Z"
-            />
-          </svg>
-          <span class="sr-only">Previous</span>
-        </button>
-        <div class="main__date">
-          <strong>Today</strong>
-        </div>
-        <button class="main__date-edit-btn" type="button">Edit</button>
-      </div>
-      <div class="main__stat-blocks">
-        <!--
-			To get the stroke-dashoffset for the rings:
+	<header class="app-header">
+		<button class="app-header-btn app-header-btn--active">
+			<svg xmlns="http://www.w3.org/2000/svg" width="192" height="192" fill="currentColor" viewBox="0 0 256 256">
+				<rect width="256" height="256" fill="none"></rect>
+				<line x1="40" y1="128" x2="216" y2="128" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></line>
+				<line x1="40" y1="64" x2="216" y2="64" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></line>
+				<line x1="40" y1="192" x2="216" y2="192" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></line>
+			</svg>
+		</button>
+		<button class="app-header-btn app-header-btn--notification">
+			<svg xmlns="http://www.w3.org/2000/svg" width="192" height="192" fill="currentColor" viewBox="0 0 256 256">
+				<rect width="256" height="256" fill="none"></rect>
+				<line x1="96" y1="224" x2="160" y2="224" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></line>
+				<path d="M56.20305,104A71.899,71.899,0,0,1,128.5484,32.002c39.58967.29432,71.25651,33.20133,71.25651,72.90185V112c0,35.81563,7.49325,56.59893,14.093,67.95814A7.999,7.999,0,0,1,207.01628,192H48.98365A7.99908,7.99908,0,0,1,42.103,179.95641c6.60328-11.35959,14.1-32.1426,14.1-67.95641Z" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></path>
+			</svg>
+		</button>
+	</header>
+	<main class="app-body">
+		<section class="section">
+			<div class="section-header">
+				<h2 class="section-title">Bestsellers</h2>
+				<span class="section-icon">
+					<svg xmlns="http://www.w3.org/2000/svg" width="192" height="192" fill="currentColor" viewBox="0 0 256 256">
+						<rect width="256" height="256" fill="none"></rect>
+						<line x1="40" y1="128" x2="216" y2="128" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></line>
+						<polyline points="144 56 216 128 144 200" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></polyline>
+					</svg>
+				</span>
+			</div>
+			<ul class="product-list">
+				<li class="product-list-item">
+					<article class="product">
+						<div class="product-image">
+<img src="https://assets.codepen.io/285131/ps5-controller.png" />
+						</div>
+						<div class="product-content">
+							<h3 class="product-title">Playstation Controller</h3>
+							<div class="product-rating">
+								<svg xmlns="http://www.w3.org/2000/svg" width="192" height="192" fill="currentColor" viewBox="0 0 256 256">
+									<rect width="256" height="256" fill="none"></rect>
+									<path d="M239.166,97.41117A16.37036,16.37036,0,0,0,224.63477,86.044l-59.39063-4.15625L143.21289,26.41117A16.33117,16.33117,0,0,0,127.99414,15.9971h-.01562A16.324,16.324,0,0,0,112.791,26.41117L90.43164,82.208,31.36914,86.044A16.37036,16.37036,0,0,0,16.83789,97.41117a16.68222,16.68222,0,0,0,5.15625,18.0625l45.4375,38.40625L53.916,207.044a18.37492,18.37492,0,0,0,7.01562,19.51562,17.83088,17.83088,0,0,0,20.0625.625l46.875-29.69531c.0625-.04687.125-.07812.26563,0l50.4375,31.95313a16.14026,16.14026,0,0,0,18.20312-.5625,16.64744,16.64744,0,0,0,6.35938-17.67969L188.77539,153.1221l45.23438-37.64843A16.68222,16.68222,0,0,0,239.166,97.41117Z"></path>
+								</svg>
+								<svg xmlns="http://www.w3.org/2000/svg" width="192" height="192" fill="currentColor" viewBox="0 0 256 256">
+									<rect width="256" height="256" fill="none"></rect>
+									<path d="M239.166,97.41117A16.37036,16.37036,0,0,0,224.63477,86.044l-59.39063-4.15625L143.21289,26.41117A16.33117,16.33117,0,0,0,127.99414,15.9971h-.01562A16.324,16.324,0,0,0,112.791,26.41117L90.43164,82.208,31.36914,86.044A16.37036,16.37036,0,0,0,16.83789,97.41117a16.68222,16.68222,0,0,0,5.15625,18.0625l45.4375,38.40625L53.916,207.044a18.37492,18.37492,0,0,0,7.01562,19.51562,17.83088,17.83088,0,0,0,20.0625.625l46.875-29.69531c.0625-.04687.125-.07812.26563,0l50.4375,31.95313a16.14026,16.14026,0,0,0,18.20312-.5625,16.64744,16.64744,0,0,0,6.35938-17.67969L188.77539,153.1221l45.23438-37.64843A16.68222,16.68222,0,0,0,239.166,97.41117Z"></path>
+								</svg>
+								<svg xmlns="http://www.w3.org/2000/svg" width="192" height="192" fill="currentColor" viewBox="0 0 256 256">
+									<rect width="256" height="256" fill="none"></rect>
+									<path d="M239.166,97.41117A16.37036,16.37036,0,0,0,224.63477,86.044l-59.39063-4.15625L143.21289,26.41117A16.33117,16.33117,0,0,0,127.99414,15.9971h-.01562A16.324,16.324,0,0,0,112.791,26.41117L90.43164,82.208,31.36914,86.044A16.37036,16.37036,0,0,0,16.83789,97.41117a16.68222,16.68222,0,0,0,5.15625,18.0625l45.4375,38.40625L53.916,207.044a18.37492,18.37492,0,0,0,7.01562,19.51562,17.83088,17.83088,0,0,0,20.0625.625l46.875-29.69531c.0625-.04687.125-.07812.26563,0l50.4375,31.95313a16.14026,16.14026,0,0,0,18.20312-.5625,16.64744,16.64744,0,0,0,6.35938-17.67969L188.77539,153.1221l45.23438-37.64843A16.68222,16.68222,0,0,0,239.166,97.41117Z"></path>
+								</svg>
+								<svg xmlns="http://www.w3.org/2000/svg" width="192" height="192" fill="currentColor" viewBox="0 0 256 256">
+									<rect width="256" height="256" fill="none"></rect>
+									<path d="M239.166,97.41117A16.37036,16.37036,0,0,0,224.63477,86.044l-59.39063-4.15625L143.21289,26.41117A16.33117,16.33117,0,0,0,127.99414,15.9971h-.01562A16.324,16.324,0,0,0,112.791,26.41117L90.43164,82.208,31.36914,86.044A16.37036,16.37036,0,0,0,16.83789,97.41117a16.68222,16.68222,0,0,0,5.15625,18.0625l45.4375,38.40625L53.916,207.044a18.37492,18.37492,0,0,0,7.01562,19.51562,17.83088,17.83088,0,0,0,20.0625.625l46.875-29.69531c.0625-.04687.125-.07812.26563,0l50.4375,31.95313a16.14026,16.14026,0,0,0,18.20312-.5625,16.64744,16.64744,0,0,0,6.35938-17.67969L188.77539,153.1221l45.23438-37.64843A16.68222,16.68222,0,0,0,239.166,97.41117Z"></path>
+								</svg>
+								<svg xmlns="http://www.w3.org/2000/svg" width="192" height="192" fill="currentColor" viewBox="0 0 256 256">
+									<rect width="256" height="256" fill="none"></rect>
+									<path d="M239.166,97.41117A16.37036,16.37036,0,0,0,224.63477,86.044l-59.39063-4.15625L143.21289,26.41117A16.33117,16.33117,0,0,0,127.99414,15.9971h-.01562A16.324,16.324,0,0,0,112.791,26.41117L90.43164,82.208,31.36914,86.044A16.37036,16.37036,0,0,0,16.83789,97.41117a16.68222,16.68222,0,0,0,5.15625,18.0625l45.4375,38.40625L53.916,207.044a18.37492,18.37492,0,0,0,7.01562,19.51562,17.83088,17.83088,0,0,0,20.0625.625l46.875-29.69531c.0625-.04687.125-.07812.26563,0l50.4375,31.95313a16.14026,16.14026,0,0,0,18.20312-.5625,16.64744,16.64744,0,0,0,6.35938-17.67969L188.77539,153.1221l45.23438-37.64843A16.68222,16.68222,0,0,0,239.166,97.41117Z"></path>
+								</svg>
+							</div>
+							<div class="product-info">
+								<span class="product-price">$59.99</span>
+								<div class="product-btn-group">
+									<button class="product-btn product-btn--favorite">
+										<svg xmlns="http://www.w3.org/2000/svg" width="192" height="192" fill="currentColor" viewBox="0 0 256 256">
+											<rect width="256" height="256" fill="none"></rect>
+											<path d="M133.65683,211.88227l81.0323-81.0322c19.9104-19.91038,22.84784-52.666,4.00583-73.59029a52.0026,52.0026,0,0,0-75.46451-2.02934L127.99994,70.46082,114.85007,57.3109C94.93972,37.40047,62.18409,34.463,41.25979,53.305a52.00261,52.00261,0,0,0-2.02934,75.46452l83.11268,83.11272A8,8,0,0,0,133.65683,211.88227Z" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></path>
+										</svg>
+									</button>
+									<button class="product-btn product-btn--add">
+										<svg xmlns="http://www.w3.org/2000/svg" width="192" height="192" fill="currentColor" viewBox="0 0 256 256">
+											<rect width="256" height="256" fill="none"></rect>
+											<line x1="40" y1="128" x2="216" y2="128" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></line>
+											<line x1="128" y1="40" x2="128" y2="216" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></line>
+										</svg>
+									</button>
+								</div>
+							</div>
+						</div>
+					</article>
+				</li>
+				<li class="product-list-item">
+					<article class="product">
+						<div class="product-image">
+<img src="https://assets.codepen.io/285131/apple-watch.png" />
+						</div>
+						<div class="product-content">
+							<h3 class="product-title">Apple Watch Series 6</h3>
+							<div class="product-rating">
+								<svg xmlns="http://www.w3.org/2000/svg" width="192" height="192" fill="currentColor" viewBox="0 0 256 256">
+									<rect width="256" height="256" fill="none"></rect>
+									<path d="M239.166,97.41117A16.37036,16.37036,0,0,0,224.63477,86.044l-59.39063-4.15625L143.21289,26.41117A16.33117,16.33117,0,0,0,127.99414,15.9971h-.01562A16.324,16.324,0,0,0,112.791,26.41117L90.43164,82.208,31.36914,86.044A16.37036,16.37036,0,0,0,16.83789,97.41117a16.68222,16.68222,0,0,0,5.15625,18.0625l45.4375,38.40625L53.916,207.044a18.37492,18.37492,0,0,0,7.01562,19.51562,17.83088,17.83088,0,0,0,20.0625.625l46.875-29.69531c.0625-.04687.125-.07812.26563,0l50.4375,31.95313a16.14026,16.14026,0,0,0,18.20312-.5625,16.64744,16.64744,0,0,0,6.35938-17.67969L188.77539,153.1221l45.23438-37.64843A16.68222,16.68222,0,0,0,239.166,97.41117Z"></path>
+								</svg>
+								<svg xmlns="http://www.w3.org/2000/svg" width="192" height="192" fill="currentColor" viewBox="0 0 256 256">
+									<rect width="256" height="256" fill="none"></rect>
+									<path d="M239.166,97.41117A16.37036,16.37036,0,0,0,224.63477,86.044l-59.39063-4.15625L143.21289,26.41117A16.33117,16.33117,0,0,0,127.99414,15.9971h-.01562A16.324,16.324,0,0,0,112.791,26.41117L90.43164,82.208,31.36914,86.044A16.37036,16.37036,0,0,0,16.83789,97.41117a16.68222,16.68222,0,0,0,5.15625,18.0625l45.4375,38.40625L53.916,207.044a18.37492,18.37492,0,0,0,7.01562,19.51562,17.83088,17.83088,0,0,0,20.0625.625l46.875-29.69531c.0625-.04687.125-.07812.26563,0l50.4375,31.95313a16.14026,16.14026,0,0,0,18.20312-.5625,16.64744,16.64744,0,0,0,6.35938-17.67969L188.77539,153.1221l45.23438-37.64843A16.68222,16.68222,0,0,0,239.166,97.41117Z"></path>
+								</svg>
+								<svg xmlns="http://www.w3.org/2000/svg" width="192" height="192" fill="currentColor" viewBox="0 0 256 256">
+									<rect width="256" height="256" fill="none"></rect>
+									<path d="M239.166,97.41117A16.37036,16.37036,0,0,0,224.63477,86.044l-59.39063-4.15625L143.21289,26.41117A16.33117,16.33117,0,0,0,127.99414,15.9971h-.01562A16.324,16.324,0,0,0,112.791,26.41117L90.43164,82.208,31.36914,86.044A16.37036,16.37036,0,0,0,16.83789,97.41117a16.68222,16.68222,0,0,0,5.15625,18.0625l45.4375,38.40625L53.916,207.044a18.37492,18.37492,0,0,0,7.01562,19.51562,17.83088,17.83088,0,0,0,20.0625.625l46.875-29.69531c.0625-.04687.125-.07812.26563,0l50.4375,31.95313a16.14026,16.14026,0,0,0,18.20312-.5625,16.64744,16.64744,0,0,0,6.35938-17.67969L188.77539,153.1221l45.23438-37.64843A16.68222,16.68222,0,0,0,239.166,97.41117Z"></path>
+								</svg>
+							</div>
+							<div class="product-info">
+								<span class="product-price">$449.99</span>
+								<div class="product-btn-group">
+									<button class="product-btn product-btn--favorite">
+										<svg xmlns="http://www.w3.org/2000/svg" width="192" height="192" fill="currentColor" viewBox="0 0 256 256">
+											<rect width="256" height="256" fill="none"></rect>
+											<path d="M133.65683,211.88227l81.0323-81.0322c19.9104-19.91038,22.84784-52.666,4.00583-73.59029a52.0026,52.0026,0,0,0-75.46451-2.02934L127.99994,70.46082,114.85007,57.3109C94.93972,37.40047,62.18409,34.463,41.25979,53.305a52.00261,52.00261,0,0,0-2.02934,75.46452l83.11268,83.11272A8,8,0,0,0,133.65683,211.88227Z" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></path>
+										</svg>
+									</button>
+									<button class="product-btn product-btn--add">
+										<svg xmlns="http://www.w3.org/2000/svg" width="192" height="192" fill="currentColor" viewBox="0 0 256 256">
+											<rect width="256" height="256" fill="none"></rect>
+											<line x1="40" y1="128" x2="216" y2="128" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></line>
+											<line x1="128" y1="40" x2="128" y2="216" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></line>
+										</svg>
+									</button>
+								</div>
+							</div>
+						</div>
+					</article>
+				</li>
+				<li class="product-list-item">
+					<article class="product">
+						<div class="product-image">
+<img src="https://assets.codepen.io/285131/xbox-controller.png" />
+						</div>
+						<div class="product-content">
+							<h3 class="product-title">Xbox Controller</h3>
+							<div class="product-rating">
+								<svg xmlns="http://www.w3.org/2000/svg" width="192" height="192" fill="currentColor" viewBox="0 0 256 256">
+									<rect width="256" height="256" fill="none"></rect>
+									<path d="M239.166,97.41117A16.37036,16.37036,0,0,0,224.63477,86.044l-59.39063-4.15625L143.21289,26.41117A16.33117,16.33117,0,0,0,127.99414,15.9971h-.01562A16.324,16.324,0,0,0,112.791,26.41117L90.43164,82.208,31.36914,86.044A16.37036,16.37036,0,0,0,16.83789,97.41117a16.68222,16.68222,0,0,0,5.15625,18.0625l45.4375,38.40625L53.916,207.044a18.37492,18.37492,0,0,0,7.01562,19.51562,17.83088,17.83088,0,0,0,20.0625.625l46.875-29.69531c.0625-.04687.125-.07812.26563,0l50.4375,31.95313a16.14026,16.14026,0,0,0,18.20312-.5625,16.64744,16.64744,0,0,0,6.35938-17.67969L188.77539,153.1221l45.23438-37.64843A16.68222,16.68222,0,0,0,239.166,97.41117Z"></path>
+								</svg>
+								<svg xmlns="http://www.w3.org/2000/svg" width="192" height="192" fill="currentColor" viewBox="0 0 256 256">
+									<rect width="256" height="256" fill="none"></rect>
+									<path d="M239.166,97.41117A16.37036,16.37036,0,0,0,224.63477,86.044l-59.39063-4.15625L143.21289,26.41117A16.33117,16.33117,0,0,0,127.99414,15.9971h-.01562A16.324,16.324,0,0,0,112.791,26.41117L90.43164,82.208,31.36914,86.044A16.37036,16.37036,0,0,0,16.83789,97.41117a16.68222,16.68222,0,0,0,5.15625,18.0625l45.4375,38.40625L53.916,207.044a18.37492,18.37492,0,0,0,7.01562,19.51562,17.83088,17.83088,0,0,0,20.0625.625l46.875-29.69531c.0625-.04687.125-.07812.26563,0l50.4375,31.95313a16.14026,16.14026,0,0,0,18.20312-.5625,16.64744,16.64744,0,0,0,6.35938-17.67969L188.77539,153.1221l45.23438-37.64843A16.68222,16.68222,0,0,0,239.166,97.41117Z"></path>
+								</svg>
+								<svg xmlns="http://www.w3.org/2000/svg" width="192" height="192" fill="currentColor" viewBox="0 0 256 256">
+									<rect width="256" height="256" fill="none"></rect>
+									<path d="M239.166,97.41117A16.37036,16.37036,0,0,0,224.63477,86.044l-59.39063-4.15625L143.21289,26.41117A16.33117,16.33117,0,0,0,127.99414,15.9971h-.01562A16.324,16.324,0,0,0,112.791,26.41117L90.43164,82.208,31.36914,86.044A16.37036,16.37036,0,0,0,16.83789,97.41117a16.68222,16.68222,0,0,0,5.15625,18.0625l45.4375,38.40625L53.916,207.044a18.37492,18.37492,0,0,0,7.01562,19.51562,17.83088,17.83088,0,0,0,20.0625.625l46.875-29.69531c.0625-.04687.125-.07812.26563,0l50.4375,31.95313a16.14026,16.14026,0,0,0,18.20312-.5625,16.64744,16.64744,0,0,0,6.35938-17.67969L188.77539,153.1221l45.23438-37.64843A16.68222,16.68222,0,0,0,239.166,97.41117Z"></path>
+								</svg>
+								<svg xmlns="http://www.w3.org/2000/svg" width="192" height="192" fill="currentColor" viewBox="0 0 256 256">
+									<rect width="256" height="256" fill="none"></rect>
+									<path d="M239.166,97.41117A16.37036,16.37036,0,0,0,224.63477,86.044l-59.39063-4.15625L143.21289,26.41117A16.33117,16.33117,0,0,0,127.99414,15.9971h-.01562A16.324,16.324,0,0,0,112.791,26.41117L90.43164,82.208,31.36914,86.044A16.37036,16.37036,0,0,0,16.83789,97.41117a16.68222,16.68222,0,0,0,5.15625,18.0625l45.4375,38.40625L53.916,207.044a18.37492,18.37492,0,0,0,7.01562,19.51562,17.83088,17.83088,0,0,0,20.0625.625l46.875-29.69531c.0625-.04687.125-.07812.26563,0l50.4375,31.95313a16.14026,16.14026,0,0,0,18.20312-.5625,16.64744,16.64744,0,0,0,6.35938-17.67969L188.77539,153.1221l45.23438-37.64843A16.68222,16.68222,0,0,0,239.166,97.41117Z"></path>
+								</svg>
+							</div>
+							<div class="product-info">
+								<span class="product-price">$79.99</span>
+								<div class="product-btn-group">
+									<button class="product-btn product-btn--favorite">
+										<svg xmlns="http://www.w3.org/2000/svg" width="192" height="192" fill="currentColor" viewBox="0 0 256 256">
+											<rect width="256" height="256" fill="none"></rect>
+											<path d="M133.65683,211.88227l81.0323-81.0322c19.9104-19.91038,22.84784-52.666,4.00583-73.59029a52.0026,52.0026,0,0,0-75.46451-2.02934L127.99994,70.46082,114.85007,57.3109C94.93972,37.40047,62.18409,34.463,41.25979,53.305a52.00261,52.00261,0,0,0-2.02934,75.46452l83.11268,83.11272A8,8,0,0,0,133.65683,211.88227Z" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></path>
+										</svg>
+									</button>
+									<button class="product-btn product-btn--add">
+										<svg xmlns="http://www.w3.org/2000/svg" width="192" height="192" fill="currentColor" viewBox="0 0 256 256">
+											<rect width="256" height="256" fill="none"></rect>
+											<line x1="40" y1="128" x2="216" y2="128" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></line>
+											<line x1="128" y1="40" x2="128" y2="216" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></line>
+										</svg>
+									</button>
+								</div>
+							</div>
+						</div>
+					</article>
+				</li>
+			</ul>
+		</section>
+		<section class="section">
+			<div class="section-header">
+				<h2 class="section-title">Categories</h2>
+				<span class="section-icon"><svg xmlns="http://www.w3.org/2000/svg" width="192" height="192" fill="currentColor" viewBox="0 0 256 256">
+						<rect width="256" height="256" fill="none"></rect>
+						<line x1="40" y1="128" x2="216" y2="128" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></line>
+						<polyline points="144 56 216 128 144 200" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></polyline>
+					</svg>
+				</span>
+			</div>
+			<ul class="category-list">
+				<li class="category-list-item">
 
-			2πr * (1 - value/max)
-			-->
-        <div class="main__stat-block main__stat-block--lg">
-          <div class="main__stat-graph main__stat-graph--filled">
-            <svg
-              class="ring"
-              viewBox="0 0 180 180"
-              height="180"
-              width="180"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <circle
-                class="ring-track"
-                cx="90"
-                cy="90"
-                r="82"
-                fill="none"
-                stroke="#7f7f7f"
-                stroke-width="16"
-              />
-              <circle
-                class="ring-stroke ring-stroke--steps"
-                cx="90"
-                cy="90"
-                r="82"
-                fill="none"
-                stroke="#000"
-                stroke-linecap="round"
-                stroke-width="16"
-                stroke-dasharray="515.22 515.22"
-                stroke-dashoffset="0"
-                transform="rotate(-90,90,90)"
-              />
-              <circle
-                class="ring-fill"
-                cx="90"
-                cy="90"
-                r="0"
-                fill="none"
-                transform="rotate(-90,90,90)"
-              />
-            </svg>
-            <div class="main__stat-detail">
-              <svg
-                role="img"
-                aria-label="Footprints"
-                class="icon"
-                viewBox="0 0 36 36"
-                height="36"
-                width="36"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  class="no-fill"
-                  fill="none"
-                  stroke="#000"
-                  stroke-width="2"
-                  d="M 14.831 17.296 C 13.365 17.803 12 18.046 10.142 18.623 C 10.87 27.73 19.472 24.186 14.831 17.296 Z M 14.236 15.036 C 14.26 13.771 14.191 12.55 14.74 11.349 C 15.362 10.06 15.461 8.925 15.115 7.054 C 14.493 3.647 13.171 1.521 11.389 1.055 C 7.586 0.499 7.113 4.24 7.022 6.974 C 6.812 8.503 8.106 15.054 9.669 16.162 C 11.205 15.77 12.713 15.386 14.236 15.036 Z"
-                />
-                <path
-                  class="no-fill"
-                  fill="none"
-                  stroke="#000"
-                  stroke-width="2"
-                  d="M 21.184 28.252 C 21.184 28.252 24.001 28.918 25.859 29.496 C 25.128 38.603 16.542 35.143 21.184 28.252 Z M 21.764 26.007 C 21.741 24.741 21.807 23.525 21.261 22.32 C 20.64 21.031 20.541 19.9 20.885 18.026 C 21.508 14.618 22.828 12.495 24.61 12.029 C 28.417 11.471 28.888 15.211 28.977 17.945 C 29.187 19.475 27.897 26.027 26.332 27.135 C 24.799 26.743 23.288 26.357 21.764 26.007 Z"
-                />
-              </svg>
-              <strong class="main__stat-value">10,396</strong>
-              <span class="main__stat-unit">Steps</span>
-            </div>
-          </div>
-        </div>
-        <div class="main__stat-block">
-          <div class="main__stat-graph">
-            <svg
-              class="ring"
-              viewBox="0 0 60 60"
-              height="60"
-              width="60"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <circle
-                class="ring-track"
-                cx="30"
-                cy="30"
-                r="26"
-                fill="none"
-                stroke="#7f7f7f"
-                stroke-width="8"
-              />
-              <circle
-                class="ring-stroke ring-stroke--cals"
-                cx="30"
-                cy="30"
-                r="26"
-                fill="none"
-                stroke="#000"
-                stroke-linecap="round"
-                stroke-width="8"
-                stroke-dasharray="163.36 163.36"
-                stroke-dashoffset="12.25"
-                transform="rotate(-90,30,30)"
-              />
-            </svg>
-            <svg
-              role="img"
-              aria-label="Flame"
-              class="icon"
-              viewBox="0 0 24 24"
-              height="24"
-              width="24"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                class="no-fill"
-                fill="none"
-                stroke="#000"
-                stroke-width="2"
-                d="M 14.505 1 C 11.546 1.356 10.354 12.419 10.272 12.478 C 10.189 12.538 6.773 6.184 6.773 6.184 C 6.773 6.184 3.855 8.381 4 14 C 4.2 18 5.868 23.067 12.177 22.999 C 18.488 22.932 20.1 18 20 14 C 19.9 10 17.533 10.05 15.964 6.738 C 14.638 3.939 14.505 1 14.505 1 Z"
-              />
-            </svg>
-          </div>
-          <div class="main__stat-detail">
-            <strong class="main__stat-value">1,850</strong>
-            <span class="main__stat-unit">Cals</span>
-          </div>
-        </div>
-        <div class="main__stat-block">
-          <div class="main__stat-graph">
-            <svg
-              class="ring"
-              viewBox="0 0 60 60"
-              height="60"
-              width="60"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <circle
-                class="ring-track"
-                cx="30"
-                cy="30"
-                r="26"
-                fill="none"
-                stroke="#7f7f7f"
-                stroke-width="8"
-              />
-              <circle
-                class="ring-stroke ring-stroke--miles"
-                cx="30"
-                cy="30"
-                r="26"
-                fill="none"
-                stroke="#000"
-                stroke-linecap="round"
-                stroke-width="8"
-                stroke-dasharray="163.36 163.36"
-                stroke-dashoffset="35.39"
-                transform="rotate(-90,30,30)"
-              />
-            </svg>
-            <svg
-              role="img"
-              aria-label="Location marker"
-              class="icon"
-              viewBox="0 0 24 24"
-              height="24"
-              width="24"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M12 2C7.6 2 4 5.6 4 10C4 15.4 11 21.5 11.3 21.8C11.5 21.9 11.8 22 12 22C12.2 22 12.5 21.9 12.7 21.8C13 21.5 20 15.4 20 10C20 5.6 16.4 2 12 2ZM12 19.7C9.9 17.7 6 13.4 6 10C6 6.7 8.7 4 12 4C15.3 4 18 6.7 18 10C18 13.3 14.1 17.7 12 19.7ZM12 6C9.8 6 8 7.8 8 10C8 12.2 9.8 14 12 14C14.2 14 16 12.2 16 10C16 7.8 14.2 6 12 6ZM12 12C10.9 12 10 11.1 10 10C10 8.9 10.9 8 12 8C13.1 8 14 8.9 14 10C14 11.1 13.1 12 12 12Z"
-              />
-            </svg>
-          </div>
-          <div class="main__stat-detail">
-            <strong class="main__stat-value">4.7</strong>
-            <span class="main__stat-unit">Miles</span>
-          </div>
-        </div>
-        <div class="main__stat-block">
-          <div class="main__stat-graph">
-            <svg
-              class="ring"
-              viewBox="0 0 60 60"
-              height="60"
-              width="60"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <circle
-                class="ring-track"
-                cx="30"
-                cy="30"
-                r="26"
-                fill="none"
-                stroke="#7f7f7f"
-                stroke-width="8"
-              />
-              <circle
-                class="ring-stroke ring-stroke--mins"
-                cx="30"
-                cy="30"
-                r="26"
-                fill="none"
-                stroke="#000"
-                stroke-linecap="round"
-                stroke-width="8"
-                stroke-dasharray="163.36 163.36"
-                stroke-dashoffset="65.34"
-                transform="rotate(-90,30,30)"
-              />
-            </svg>
-            <svg
-              role="img"
-              aria-label="Lightning bolt"
-              class="icon"
-              viewBox="0 0 24 24"
-              height="24"
-              width="24"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <polygon
-                points="14,1 13,9 22,9 11,23 12,15 2,15"
-                fill="none"
-                stroke="#000"
-                stroke-linejoin="round"
-                stroke-width="2"
-              />
-            </svg>
-          </div>
-          <div class="main__stat-detail">
-            <strong class="main__stat-value">72</strong>
-            <span class="main__stat-unit">Mins</span>
-          </div>
-        </div>
-      </div>
-      <div class="main__stat-rows">
-        <div class="main__stat-row">
-          <div class="main__stat-graph">
-            <svg
-              role="img"
-              aria-label="Beating heart"
-              class="icon icon--red icon--pulse"
-              viewBox="0 0 24 24"
-              height="24"
-              width="24"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M12 4.52765C9.64418 2.41689 6.02125 2.49347 3.75736 4.75736C1.41421 7.10051 1.41421 10.8995 3.75736 13.2426L10.5858 20.0711C11.3668 20.8521 12.6332 20.8521 13.4142 20.0711L20.2426 13.2426C22.5858 10.8995 22.5858 7.10051 20.2426 4.75736C17.9787 2.49347 14.3558 2.41689 12 4.52765ZM10.8284 6.17157L11.2929 6.63604C11.6834 7.02656 12.3166 7.02656 12.7071 6.63604L13.1716 6.17157C14.7337 4.60948 17.2663 4.60948 18.8284 6.17157C20.3905 7.73367 20.3905 10.2663 18.8284 11.8284L12 18.6569L5.17157 11.8284C3.60948 10.2663 3.60948 7.73367 5.17157 6.17157C6.73367 4.60948 9.26633 4.60948 10.8284 6.17157Z"
-              />
-            </svg>
-          </div>
-          <div class="main__stat-detail">
-            <span class="main__stat-value"
-              ><strong>90</strong> <small>bpm</small></span
-            >
-            <span class="main__stat-subtext">76 bpm resting heart rate</span>
-          </div>
-        </div>
-        <div class="main__stat-row">
-          <div class="main__stat-graph">
-            <svg
-              class="ring"
-              viewBox="0 0 60 60"
-              height="60"
-              width="60"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <circle
-                class="ring-track"
-                cx="30"
-                cy="30"
-                r="21"
-                fill="none"
-                stroke="#7f7f7f"
-                stroke-width="4"
-              />
-              <circle
-                class="ring-stroke ring-stroke--stepHrs"
-                cx="30"
-                cy="30"
-                r="21"
-                fill="none"
-                stroke="#000"
-                stroke-linecap="round"
-                stroke-width="4"
-                stroke-dasharray="131.95 131.95"
-                stroke-dashoffset="52.78"
-                transform="rotate(-90,30,30)"
-              />
-            </svg>
-            <svg
-              role="img"
-              aria-label="Person"
-              class="icon"
-              viewBox="0 0 24 24"
-              height="24"
-              width="24"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <ellipse
-                fill="none"
-                stroke="#000"
-                stroke-width="2"
-                cx="12"
-                cy="4"
-                rx="3"
-                ry="3"
-              />
-              <path
-                class="no-fill"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M 10.216 9.108 C 10.216 9.108 3.146 3.809 1.477 6.133 C -0.46 8.829 9.295 12.25 9.295 12.25 C 9.295 12.25 6.011 22.985 8.381 23.076 C 10.953 23.175 11.855 16.128 11.873 16.128 C 11.891 16.128 12.21 23.037 14.991 22.973 C 17.772 22.909 14.555 12.188 14.555 12.188 C 14.555 12.188 22.747 13.423 22.754 10.901 C 22.762 8.142 13.734 9.126 13.734 9.126 C 13.734 9.126 10.318 9.033 10.216 9.108 Z"
-              />
-            </svg>
-          </div>
-          <div class="main__stat-detail">
-            <span class="main__stat-value">
-              <strong>3</strong> <small>of</small> <strong>5</strong>
-              <small>hr</small>
-            </span>
-            <span class="main__stat-subtext">250+ steps per hour</span>
-          </div>
-        </div>
-      </div>
-    </main>
-    <footer class="footer">
-      <button class="footer__nav-btn" type="button" title="Today">
-        <svg
-          class="icon"
-          viewBox="0 0 24 24"
-          height="24"
-          width="24"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <circle cx="2" cy="12" r="1" />
-          <circle cx="7" cy="7" r="1.25" />
-          <circle cx="7" cy="12" r="1.25" />
-          <circle cx="7" cy="17" r="1.25" />
-          <circle cx="12" cy="2" r="1.5" />
-          <circle cx="12" cy="7" r="1.5" />
-          <circle cx="12" cy="12" r="1.5" />
-          <circle cx="12" cy="17" r="1.5" />
-          <circle cx="12" cy="22" r="1.5" />
-          <circle cx="17" cy="7" r="1.75" />
-          <circle cx="17" cy="12" r="1.75" />
-          <circle cx="17" cy="17" r="1.75" />
-          <circle cx="22" cy="12" r="2" />
-        </svg>
-      </button>
-      <button class="footer__nav-btn" type="button" title="Discover">
-        <svg
-          class="icon"
-          viewBox="0 0 24 24"
-          height="24"
-          width="24"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            d="M4 12C4 7.58172 7.58172 4 12 4C16.4183 4 20 7.58172 20 12C20 16.4183 16.4183 20 12 20C7.58172 20 4 16.4183 4 12ZM12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2ZM13.4142 13.4143L15.5356 8.46451L10.5858 10.5858L8.46448 15.5356L13.4142 13.4143Z"
-          />
-        </svg>
-      </button>
-      <button class="footer__nav-btn" type="button" title="Community">
-        <svg
-          class="icon"
-          viewBox="0 0 24 24"
-          height="24"
-          width="24"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            d="M10 4C7.79086 4 6 5.79086 6 8C6 10.2091 7.79086 12 10 12C12.2091 12 14 10.2091 14 8C14 5.79086 12.2091 4 10 4ZM4 8C4 4.68629 6.68629 2 10 2C13.3137 2 16 4.68629 16 8C16 11.3137 13.3137 14 10 14C6.68629 14 4 11.3137 4 8ZM16.8284 3.75736C17.219 3.36683 17.8521 3.36683 18.2426 3.75736C20.5858 6.10051 20.5858 9.8995 18.2426 12.2426C17.8521 12.6332 17.219 12.6332 16.8284 12.2426C16.4379 11.8521 16.4379 11.219 16.8284 10.8284C18.3905 9.26633 18.3905 6.73367 16.8284 5.17157C16.4379 4.78105 16.4379 4.14788 16.8284 3.75736ZM17.5299 16.7575C17.6638 16.2217 18.2067 15.8959 18.7425 16.0299C20.0705 16.3618 20.911 17.2109 21.3944 18.1778C21.8622 19.1133 22 20.1571 22 21C22 21.5523 21.5523 22 21 22C20.4477 22 20 21.5523 20 21C20 20.3429 19.8878 19.6367 19.6056 19.0722C19.339 18.5391 18.9295 18.1382 18.2575 17.9701C17.7217 17.8362 17.3959 17.2933 17.5299 16.7575ZM6.5 18C5.24054 18 4 19.2135 4 21C4 21.5523 3.55228 22 3 22C2.44772 22 2 21.5523 2 21C2 18.3682 3.89347 16 6.5 16H13.5C16.1065 16 18 18.3682 18 21C18 21.5523 17.5523 22 17 22C16.4477 22 16 21.5523 16 21C16 19.2135 14.7595 18 13.5 18H6.5Z"
-          />
-        </svg>
-      </button>
-      <button class="footer__nav-btn" type="button" title="Premium">
-        <svg
-          class="icon"
-          viewBox="0 0 24 24"
-          height="24"
-          width="24"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <circle cx="2" cy="12" r="1" />
-          <circle cx="7" cy="12" r="1.25" />
-          <circle cx="12" cy="2" r="1.5" />
-          <circle cx="12" cy="12" r="1.5" />
-          <circle cx="12" cy="22" r="1.5" />
-          <circle cx="17" cy="7" r="1.75" />
-          <circle cx="17" cy="12" r="1.75" />
-          <circle cx="17" cy="17" r="1.75" />
-          <circle cx="22" cy="12" r="2" />
-        </svg>
-      </button>
-    </footer>
-  </div>
+					<a href="#" class="category">Teqnique</a>
+				</li>
+				<li class="category-list-item">
+					<a href="#" class="category">Cosmetics</a>
+				</li>
+				<li class="category-list-item">
+					<a href="#" class="category">Accessories</a>
+				</li>
+				<li class="category-list-item">
+					<a href="#" class="category">Clothing</a>
+				</li>
+				<li class="category-list-item">
+					<a href="#" class="category">Games</a>
+				</li>
+			</ul>
+		</section>
+		<section class="section">
+			<div class="section-body">
+				<div class="card">
+					<div class="card-content">
+						<h2 class="card-title">Music column</h2>
+						<span class="card-subtitle">
+							New models
+							<svg xmlns="http://www.w3.org/2000/svg" width="192" height="192" fill="currentColor" viewBox="0 0 256 256">
+								<rect width="256" height="256" fill="none"></rect>
+								<line x1="40" y1="128" x2="216" y2="128" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></line>
+								<polyline points="144 56 216 128 144 200" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></polyline>
+							</svg>
+						</span>
+					</div>
+				</div>
+			</div>
+		</section>
+	</main>
+	<footer class="app-footer">
+		<nav class="menu-bar">
+			<a href="#" class="menu-bar-item menu-bar-item--active">
+				<svg xmlns="http://www.w3.org/2000/svg" width="192" height="192" fill="currentColor" viewBox="0 0 256 256">
+					<rect width="256" height="256" fill="none"></rect>
+					<path d="M213.3815,109.61945,133.376,36.88436a8,8,0,0,0-10.76339.00036l-79.9945,72.73477A8,8,0,0,0,40,115.53855V208a8,8,0,0,0,8,8H208a8,8,0,0,0,8-8V115.53887A8,8,0,0,0,213.3815,109.61945Z" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></path>
+				</svg>
+				<span class="menu-bar-item-text">Home</span>
+			</a>
+			<a href="#" class="menu-bar-item">
+				<svg xmlns="http://www.w3.org/2000/svg" width="192" height="192" fill="currentColor" viewBox="0 0 256 256">
+					<rect width="256" height="256" fill="none"></rect>
+					<circle cx="116" cy="116" r="84" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></circle>
+					<line x1="175.39356" y1="175.40039" x2="223.99414" y2="224.00098" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></line>
+				</svg>
+				<span class="menu-bar-item-text">Search</span>
+			</a>
+			<a href="#" class="menu-bar-item">
+				<svg xmlns="http://www.w3.org/2000/svg" width="192" height="192" fill="currentColor" viewBox="0 0 256 256">
+					<rect width="256" height="256" fill="none"></rect>
+					<circle cx="80" cy="216" r="16"></circle>
+					<circle cx="184" cy="216" r="16"></circle>
+					<path d="M42.28575,72H221.71429l-26.39873,92.39554A16,16,0,0,1,179.93118,176H84.06882a16,16,0,0,1-15.38438-11.60446L32.51492,37.80223A8,8,0,0,0,24.82273,32H8" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></path>
+				</svg>
+				<span class="menu-bar-item-text">Cart</span>
+			</a>
+			<a href="#" class="menu-bar-item">
+				<svg xmlns="http://www.w3.org/2000/svg" width="192" height="192" fill="currentColor" viewBox="0 0 256 256">
+					<rect width="256" height="256" fill="none"></rect>
+					<circle cx="128" cy="96" r="64" fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="16"></circle>
+					<path d="M30.989,215.99064a112.03731,112.03731,0,0,1,194.02311.002" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></path>
+				</svg>
+				<span class="menu-bar-item-text">Profile</span>
+			</a>
+		</nav>
+	</footer>
+	</div>
 </template>
 
 
 
 <style lang="scss">
-* {
-  border: 0;
+// RESET CODE
+
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
-  margin: 0;
-  padding: 0;
 }
-:root {
-  --hue: 184;
-  --bg: hsl(var(--hue), 10%, 90%);
-  --fg: hsl(var(--hue), 66%, 24%);
-  --primary: hsl(var(--hue), 66%, 44%);
-  touch-action: pan-x pan-y;
-  --gradient: linear-gradient(
-    145deg,
-    hsl(var(--hue), 10%, 85%),
-    hsl(var(--hue), 10%, 100%)
-  );
-  font-size: 16px;
-}
+
 body,
-button {
-  color: var(--fg);
-  font: 1em/1.5 "Nunito", sans-serif;
+h1,
+h2,
+h3,
+h4,
+p,
+ul,
+ol,
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
 }
+
+html {
+  overflow-x: hidden;
+}
+
 body {
-  background: var(--bg);
-  height: 100vh;
-  display: grid;
-  place-items: center;
-  padding: 1.5em 0 0 0;
-}
-body:after {
-  content: "";
-  display: block;
-  height: 1.5em;
-  width: 100%;
-}
-/* All */
-.app,
-.header,
-.main__date-nav,
-.main__stat-row,
-.main__stat-graph,
-.footer {
-  display: flex;
-}
-.header,
-.main__date-nav,
-.footer {
-  justify-content: space-between;
-}
-.header__profile-btn,
-.header__notes-btn,
-.main__date-arrow-btn,
-.main__date-edit-btn,
-.footer__nav-btn {
-  background: transparent;
-  display: flex;
-  outline: transparent;
-  transition: all 0.15s linear;
-  -webkit-appearance: none;
-  appearance: none;
-  -webkit-tap-highlight-color: transparent;
-}
-.app {
-  background: hsl(var(--hue), 10%, 85%);
-  border-radius: 3em;
-  flex-direction: column;
-  padding: 2.25em;
-  width: 390px;
-  height: 844px;
-}
-.app__gradients {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-}
-.icon {
-  display: block;
-  margin: auto;
-  width: 1.5em;
-  height: 1.5em;
-}
-.icon circle,
-.icon path {
-  fill: currentColor;
-  transition: fill 0.15s linear;
-}
-.icon ellipse,
-.icon polygon {
-  stroke: currentColor;
-  transition: stroke 0.15s linear;
-}
-.icon .no-fill {
-  fill: none;
-  stroke: currentColor;
-}
-.icon--red path {
-  fill: hsl(3, 90%, 55%);
-}
-.icon--pulse {
-  animation: bpm 1s linear, pulse 0.75s 1s linear infinite;
-}
-.ring,
-.sr-only {
-  position: absolute;
-}
-.ring {
-  display: block;
-  inset: 0;
-  width: 100%;
-  height: auto;
-}
-.ring-fill {
-  stroke: url("#ring");
-}
-.ring-stroke {
-  animation-duration: 1s;
-  animation-timing-function: ease-in-out;
-  stroke: url("#ring");
-}
-.ring-stroke--steps {
-  animation-name: stepCount;
-}
-.ring-stroke--cals {
-  animation-name: cals;
-}
-.ring-stroke--miles {
-  animation-name: miles;
-}
-.ring-stroke--mins {
-  animation-name: mins;
-}
-.ring-stroke--stepHrs {
-  animation-name: stepHrs;
-}
-.ring-track {
-  stroke: hsl(var(--hue), 10%, 80%);
-}
-.sr-only {
-  clip: rect(1px, 1px, 1px, 1px);
-  overflow: hidden;
-  width: 1px;
-  height: 1px;
-}
-/* Header */
-.header {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 1.5em;
-}
-.header__profile-btn,
-.header__notes-btn {
-  width: 3em;
-  height: 3em;
-}
-.header__profile-btn {
-  border-radius: 1em;
-  box-shadow: 0 0 0 0.125em inset;
-}
-.header__notes-btn {
-  margin-right: -1em;
-}
-.header__profile-btn:active,
-.header__notes-btn:active {
-  transform: scale(0.9);
-}
-.header__profile-btn:focus {
-  box-shadow: 0 0 0 0.125em var(--primary) inset;
-}
-.header__profile-icon {
-  border-radius: 0.5em;
-  margin: auto;
-  width: 2em;
-  height: 2em;
-}
-.header__notes-btn:focus .icon path {
-  fill: var(--primary);
-}
-/* Main */
-.main__date-nav {
-  margin-bottom: 1.5em;
-}
-.main__date-arrow-btn,
-.main__date-edit-btn {
-  height: 1.5em;
-}
-.main__date-arrow-btn {
-  width: 1.5em;
-}
-.main__date-arrow-btn:active .icon path,
-.main__date-arrow-btn:focus .icon path {
-  fill: var(--primary);
-}
-.main__date {
-  text-transform: uppercase;
-}
-.main__date-edit-btn {
-  min-width: 1.5em;
-}
-.main__date-edit-btn:active,
-.main__date-edit-btn:focus {
-  color: var(--primary);
-}
-.main__stat-blocks {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: 1.5em;
-  margin-bottom: 1.5em;
-}
-.main__stat-block {
-  aspect-ratio: 1 / 1;
-  background: var(--gradient);
-  border-radius: 1.5em;
-  box-shadow: -0.75em -0.75em 2.25em hsl(0, 0%, 100%),
-    0.75em 0.75em 2.25em hsl(var(--hue), 5%, 65%);
-  padding: 0.75em;
-  text-align: center;
-  width: 100%;
-}
-.main__stat-block--lg {
-  aspect-ratio: 2 / 1;
-  grid-column: 1 / 4;
-  padding: 1.5em;
-}
-.main__stat-rows,
-.main__stat-row {
-  margin-bottom: 1.5em;
-}
-.main__stat-row {
-  align-items: center;
-}
-.main__stat-graph {
-  margin: 0 auto 0.75em auto;
-  position: relative;
-  width: 3.75em;
-  height: 3.75em;
-}
-.main__stat-graph .main__stat-detail {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  position: absolute;
-  inset: 0;
-}
-.main__stat-block--lg .main__stat-graph {
-  margin: auto;
-  width: 11.25em;
-  height: 11.25em;
-}
-.main__stat-block--lg .icon {
-  margin: 0 auto;
-  width: 2.25em;
-  height: 2.25em;
-}
-.main__stat-row .main__stat-graph {
-  background: var(--gradient);
-  border-radius: 1em;
-  box-shadow: -0.75em -0.75em 2.25em hsl(0, 0%, 100%),
-    0.75em 0.75em 2.25em hsl(var(--hue), 5%, 65%);
-  margin: 0 1.5em 0 0;
-}
-.main__stat-value,
-.main__stat-unit {
-  display: block;
-}
-.main__stat-value {
-  font-size: 1.25em;
-  line-height: 1.2;
-}
-.main__stat-block--lg .main__stat-value {
-  font-size: 2em;
+  scroll-behavior: smooth;
   line-height: 1.5;
 }
-.main__stat-unit,
-.main__stat-subtext {
-  font-weight: 300;
-}
-.main__stat-subtext {
-  color: hsl(var(--hue), 10%, 30%);
-}
-.main__stat-graph--filled,
-.main__stat-graph--filled .ring-fill {
-  animation-duration: 0.3s;
-  animation-delay: 1s;
-  animation-fill-mode: forwards;
-}
-.main__stat-graph--filled {
-  animation-name: statFill;
-  animation-timing-function: linear;
-}
-.main__stat-graph--filled .ring-fill {
-  animation-name: ringFill;
-  animation-timing-function: ease-in;
-}
-/* Footer */
-.footer {
-  margin-top: auto;
-}
-.footer__nav-btn {
-  background: var(--gradient);
-  border-radius: 50%;
-  box-shadow: 1em 1em 2em hsl(var(--hue), 5%, 65%),
-    -1em -1em 2em hsl(0, 0%, 100%);
-  width: 3em;
-  height: 3em;
-}
-.footer__nav-btn:active {
-  box-shadow: 0.75em 0.75em 1.5em hsl(var(--hue), 5%, 65%),
-    -0.75em -0.75em 1.5em hsl(0, 0%, 100%);
-  transform: scale(0.9);
-}
-.footer__nav-btn:focus .icon circle,
-.footer__nav-btn:focus .icon path {
-  fill: var(--primary);
+
+img {
+  max-width: 100%;
+  display: block;
 }
 
-/* Dark theme */
-@media (prefers-color-scheme: dark) {
-  :root {
-    --bg: hsl(var(--hue), 10%, 10%);
-    --fg: hsl(var(--hue), 66%, 94%);
-    --primary: hsl(var(--hue), 66%, 44%);
-    --gradient: linear-gradient(
-      145deg,
-      hsl(var(--hue), 10%, 15%),
-      hsl(var(--hue), 10%, 30%)
-    );
-  }
-  .app {
-    background: hsl(var(--hue), 10%, 20%);
-  }
-  .icon--red path {
-    fill: hsl(3, 90%, 65%);
-  }
-  .ring-track {
-    stroke: hsl(var(--hue), 10%, 30%);
-  }
-  .main__stat-block,
-  .main__stat-row .main__stat-graph {
-    box-shadow: -0.75em -0.75em 2.25em hsl(var(--hue), 10%, 30%),
-      0.75em 0.75em 2.25em hsl(var(--hue), 5%, 5%);
-  }
-  .main__stat-subtext {
-    color: hsl(var(--hue), 10%, 70%);
-  }
-  .footer__nav-btn {
-    box-shadow: -1em -1em 2em hsl(var(--hue), 10%, 30%),
-      1em 1em 2em hsl(var(--hue), 5%, 5%);
-  }
-  .footer__nav-btn:active {
-    box-shadow: -0.75em -0.75em 1.5em hsl(var(--hue), 10%, 30%),
-      0.75em 0.75em 1.5em hsl(var(--hue), 5%, 5%);
+a {
+  color: inherit;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+button {
+  border: 1px solid;
+  background-color: transparent;
+}
+
+button {
+  -moz-appearance: none;
+  appearance: none;
+  -webkit-appearance: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
   }
 }
 
-/* Animations */
-@keyframes statFill {
-  from {
-    color: var(--fg);
-  }
-  to {
-    color: hsl(var(--hue), 66%, 94%);
-  }
+// END OF RESET 
+
+
+@import url("https://fonts.googleapis.com/css2?family=Lexend:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+
+:root {
+	--c-grey-000: #ffffff;
+	--c-grey-100: #f7f5ff;
+	--c-grey-500: #dddddd;
+	--c-grey-700: #7d7d80;
+	--c-grey-900: #000000;
+
+	--c-purple-100: #cac2f2;
+	--c-purple-300: #9684fe;
+	--c-purple-500: #7762ff;
+	touch-action: pan-x pan-y;
+
+	--inner-gutter: 1.25rem;
 }
-@keyframes ringFill {
-  from {
-    r: 82px;
-    stroke-width: 16;
-  }
-  to {
-    r: 45px;
-    stroke-width: 90;
-  }
+
+::-webkit-scrollbar {
+	display: none;
 }
-@keyframes stepCount {
-  from {
-    stroke-dashoffset: 515.22;
-  }
-  to {
-    stroke-dashoffset: 0;
-  }
+
+* {
+	scrollbar-width: none;
 }
-@keyframes cals {
-  from {
-    stroke-dashoffset: 163.36;
-  }
-  to {
-    stroke-dashoffset: 12.25;
-  }
+
+body {
+	font-family: "Lexend", sans-serif;
+	min-height: 100vh;
+	background-color: var(--c-purple-500);
+	padding-top: 4rem;
+	padding-bottom: 4rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 }
-@keyframes miles {
-  from {
-    stroke-dashoffset: 163.36;
-  }
-  to {
-    stroke-dashoffset: 35.39;
-  }
+
+img {
+	max-width: 100%;
+	display: block;
 }
-@keyframes mins {
-  from {
-    stroke-dashoffset: 163.36;
-  }
-  to {
-    stroke-dashoffset: 65.34;
-  }
+
+.app {
+	background-color: var(--c-grey-100);
+	width: 95%;
+	max-width: 375px;
+	height: 800px;
+	overflow: hidden;
+	border-radius: 24px;
+	box-shadow: 0 5px 15px 0 rgba(#000, 0.1);
+	display: flex;
+	flex-direction: column;
+	position: relative;
 }
-@keyframes bpm {
-  from {
-    transform: scale(0);
-  }
-  37.5% {
-    transform: scale(1.2);
-  }
-  75%,
-  to {
-    transform: scale(1);
-  }
+
+.app-header {
+	padding: 1.5rem var(--inner-gutter);
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
 }
-@keyframes stepHrs {
-  from {
-    stroke-dashoffset: 131.95;
-  }
-  to {
-    stroke-dashoffset: 52.78;
-  }
+
+.app-header-btn {
+	width: 48px;
+	height: 48px;
+	border-radius: 12px;
+	border: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: var(--c-grey-700);
+	cursor: pointer;
+	transition: 0.15s ease;
+	svg {
+		width: 28px;
+		height: 28px;
+	}
+
+	&--active,
+	&:hover {
+		background-color: var(--c-grey-000);
+		box-shadow: 0 5px 15px rgba(#9684fe, 0.15);
+	}
+
+	&--notification {
+		position: relative;
+		&:after {
+			content: "";
+			display: block;
+			position: absolute;
+			width: 8px;
+			height: 8px;
+			border-radius: 50%;
+			background-color: var(--c-purple-500);
+			top: 8px;
+			right: 8px;
+		}
+	}
 }
-@keyframes pulse {
-  from,
-  75%,
-  to {
-    transform: scale(1);
-  }
-  25% {
-    transform: scale(0.9);
-  }
-  50% {
-    transform: scale(1.2);
-  }
+
+.section {
+	& + & {
+		margin-top: 2rem;
+	}
 }
+
+.section-header {
+	padding-left: var(--inner-gutter);
+	padding-right: var(--inner-gutter);
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin-bottom: 0.5rem;
+}
+
+.section-body {
+	padding-left: var(--inner-gutter);
+	padding-right: var(--inner-gutter);
+}
+
+.section-title {
+	font-size: 1.375rem;
+	font-weight: 600;
+	color: var(--c-grey-700);
+}
+
+.section-icon {
+	color: var(--c-grey-700);
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	svg {
+		width: 24px;
+		height: 24px;
+	}
+}
+
+.product-list {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	display: flex;
+	overflow-x: auto;
+	padding-left: 1.25rem;
+	padding-right: 1.25rem;
+	padding-bottom: 50px;
+	margin-bottom: -50px;
+	margin-top: -20px;
+	padding-top: 20px;
+}
+
+.product-list-item {
+	max-width: 70%;
+	display: inline-flex;
+	flex-shrink: 0;
+	& + & {
+		margin-left: 1rem;
+	}
+}
+
+.product {
+	display: flex;
+	flex-direction: column;
+	background-color: var(--c-grey-000);
+	box-shadow: 0 5px 20px 0 rgba(#9684fe, 0.1), 0 15px 30px 0 rgba(#9684fe, 0.05);
+	border-radius: 15px;
+	margin-top: 5.5rem;
+}
+
+.product-image {
+	margin-top: -5rem;
+	padding: 0 0.5rem;
+	img {
+		filter: drop-shadow(0 5px 15px rgba(#9684fe, 0.375));
+	}
+
+	& + * {
+		margin-top: 1rem;
+	}
+}
+
+.product-content {
+	padding: 0 1.25rem 1.25rem;
+}
+
+.product-title {
+	font-size: 1.125rem;
+	line-height: 1.25;
+	color: var(--c-grey-900);
+	letter-spacing: -0.025em;
+	font-weight: 600;
+}
+
+.product-rating {
+	margin-top: 0.5rem;
+	color: orange;
+	svg {
+		width: 16px;
+		height: 16px;
+	}
+}
+
+.product-price {
+	font-size: 1.25rem;
+	color: var(--c-purple-300);
+}
+
+.product-info {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin-top: 0.5rem;
+}
+.product-btn-group {
+	display: flex;
+	align-items: center;
+}
+
+.product-btn {
+	width: 40px;
+	height: 40px;
+	border-radius: 12px;
+	border: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: var(--c-grey-700);
+	cursor: pointer;
+	background-color: var(--c-grey-000);
+	box-shadow: 0 3px 15px rgba(#9684fe, 0.25);
+	svg {
+		width: 24px;
+		height: 24px;
+	}
+
+	& + & {
+		margin-left: 0.5rem;
+	}
+
+	&--add {
+		color: var(--c-purple-500);
+	}
+}
+
+.category-list {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	display: flex;
+	overflow-x: auto;
+	padding-left: var(--inner-gutter);
+	padding-right: var(--inner-gutter);
+	margin-top: 0.75rem;
+
+	padding-bottom: 20px;
+	margin-bottom: -20px;
+}
+
+.category-list-item {
+	& + & {
+		margin-left: 0.5rem;
+	}
+}
+
+.category {
+	display: block;
+	background-color: var(--c-grey-000);
+	box-shadow: 0 5px 10px rgba(#9684fe, 0.15);
+	text-decoration: none;
+	padding: 0.5em 1.25em;
+	border-radius: 16px;
+	font-weight: 500;
+	font-size: 1rem;
+	color: var(--c-grey-700);
+}
+
+.app-footer {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+}
+
+.menu-bar {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 24px;
+	background-color: #ffffff;
+	box-shadow: 0 -5px 15px rgba(#9684fe, 0.15);
+}
+
+.menu-bar-item {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	color: var(--c-purple-100);
+	text-decoration: none;
+	margin: 1rem 1.25rem;
+	& > * {
+		transition: 0.15s ease;
+	}
+	svg {
+		width: 32px;
+		height: 32px;
+	}
+
+	&--active,
+	&:hover {
+		color: var(--c-purple-500);
+	}
+}
+
+.menu-bar-item-text {
+	font-size: 0.875rem;
+	display: block;
+	margin-top: 0.25rem;
+}
+
+.card {
+	background-color: var(--c-purple-300);
+	color: var(--c-grey-000);
+	height: 400px;
+	border-radius: 12px;
+	background-image: url("https://assets.codepen.io/285131/airpodsmax.png");
+	background-repeat: no-repeat;
+	background-size: 100px;
+	background-position: 95% -30px;
+	overflow: hidden;
+	position: relative;
+}
+
+.card-content {
+	padding: 1.5rem 1.375rem;
+}
+
+.card-title {
+	font-size: 1.375rem;
+	font-weight: 500;
+	line-height: 1.25;
+}
+
+.card-subtitle {
+	display: flex;
+	align-items: center;
+	font-weight: 300;
+	font-size: 1.125rem;
+	svg {
+		margin-left: 0.25rem;
+		width: 20px;
+		height: 20px;
+	}
+}
+
+body {
+	&:after {
+		content: "";
+		display: block;
+		width: 80vw;
+		height: 80vw;
+		border-radius: 50%;
+		background-color: rgba(#9684fe, 0.5);
+		position: fixed;
+		z-index: -1;
+		top: -35vw;
+		right: -30vw;
+		box-shadow: -10vw 30vw 0 -20vw rgba(#9684fe, 0.25);
+	}
+
+	&:before {
+		content: "";
+		display: block;
+		width: 60vw;
+		height: 60vw;
+		border-radius: 50%;
+		background-color: rgba(#9684fe, 0.75);
+		position: fixed;
+		z-index: -1;
+		top: 50vw;
+		left: -20vw;
+		box-shadow: 20vw 20vw 0 -10vw rgba(#9684fe, 0.25);
+	}
+}
+
 </style>
