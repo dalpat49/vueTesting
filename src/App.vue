@@ -87,9 +87,7 @@ getToken(messaging, {
 			<button class="notifications">
 				<i class="ai-bell"></i>
 			</button>
-			<button class="avatar">
-<img src="https://assets.codepen.io/285131/pexels-photo-838875.jpeg" />
-			</button>
+			
 		</div>
 	</header>
 	<section class="title">
