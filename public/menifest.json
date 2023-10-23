@@ -1,7 +1,7 @@
 {
-    "name": "heloo-app",
-    "short_name": "hello-app",
-    "theme_color": "#4DBA87",
+    "name": "myapp",
+    "short_name": "myapp",
+    "theme_color": "#000000",
     "icons": [
       {
         "src": "./img/icons/android-chrome-192x192.png",
