@@ -22,7 +22,19 @@ import { register } from 'register-service-worker'
       console.log('New content is downloading.')
     },
     updated () {
-      alert('New content is available; please refresh.');
+      // Optionally, you can add a button to trigger the refresh
+      const refreshButton = document.createElement('button');
+      refreshButton.textContent = 'Refresh';
+      refreshButton.addEventListener('click', () => {
+        // Reload the page to apply the update
+        window.location.reload();
+      });
+
+      // Append the refresh button to the page
+      document.body.appendChild(refreshButton);
+
+      console.log('New content is available; please refresh.');
+      //alert('New content is available; please refresh.');
       console.log('New content is available; please refresh.')
     },
     offline () {
