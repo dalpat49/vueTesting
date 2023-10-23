@@ -81,7 +81,7 @@ getToken(messaging, {
 			</div>
 		</div>
 		<div class="header-title">
-			Dalpat singh
+			Dalpat rathore
 		</div>
 		<div class="header-buttons">
 			<button class="notifications">

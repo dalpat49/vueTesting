@@ -16,6 +16,9 @@ import { register } from 'register-service-worker'
       console.log('Content has been cached for offline use.')
     },
     updatefound () {
+
+      alert('New content is downloading');
+
       console.log('New content is downloading.')
     },
     updated () {
