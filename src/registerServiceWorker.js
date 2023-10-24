@@ -16,20 +16,20 @@ import { register } from 'register-service-worker'
       console.log('Content has been cached for offline use.')
     },
     updatefound () {
- // Optionally, you can add a button to trigger the refresh
- const refreshButton = document.createElement('button');
- refreshButton.textContent = 'Refresh';
- refreshButton.addEventListener('click', () => {
-   // Reload the page to apply the update
-   window.location.reload();
- });
+    // Optionally, you can add a button to trigger the refresh
+    const refreshButton = document.createElement('button');
+    refreshButton.textContent = 'Refresh';
+    refreshButton.addEventListener('click', () => {
+      // Reload the page to apply the update
+      window.location.reload();
+    });
 
- // Append the refresh button to the page
- document.body.appendChild(refreshButton);
-      // alert('New content is downloading');
+    // Append the refresh button to the page
+    document.body.appendChild(refreshButton);
+          // alert('New content is downloading');
 
-      console.log('New content is downloading.')
-    },
+          console.log('New content is downloading.')
+        },
     updated () {
       // Optionally, you can add a button to trigger the refresh
       const refreshButton = document.createElement('button');
