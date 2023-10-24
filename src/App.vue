@@ -63,6 +63,10 @@ getToken(messaging, {
       document.head.appendChild(viewport);
     }
   })
+
+
+
+  console.log(navigator.onLine)
 </script>
 
 <template>

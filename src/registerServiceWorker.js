@@ -31,24 +31,13 @@ import { register } from 'register-service-worker'
           console.log('New content is downloading.')
         },
     updated () {
-      // Optionally, you can add a button to trigger the refresh
-      const refreshButton = document.createElement('button');
-      refreshButton.textContent = 'Refresh';
-      refreshButton.addEventListener('click', () => {
-        // Reload the page to apply the update
-        window.location.reload();
-      });
-
-      // Append the refresh button to the page
-      document.body.appendChild(refreshButton);
-
       console.log('New content is available; please refresh.');
       //alert('New content is available; please refresh.');
       console.log('New content is available; please refresh.')
     },
     offline () {
-      alert('No internet connection found. App is running in offline mode.');
-      console.log('No internet connection found. App is running in offline mode.')
+        alert('No internet connection found. App is running in offline mode.');
+       console.log('No internet connection found. App is running in offline mode.')
     },
     error (error) {
       console.error('Error during service worker registration:', error)
