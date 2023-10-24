@@ -43,3 +43,20 @@ import { register } from 'register-service-worker'
       console.error('Error during service worker registration:', error)
     }
   })
+
+  
+self.addEventListener('fetch', function(event) {
+  event.respondWith(
+    fetch(event.request)
+      .then(function(response) {
+        // Online: Respond with the actual network response
+        return response;
+      })
+      .catch(function() {
+        // Offline: Respond with a custom offline status
+        return new Response(JSON.stringify({ status: 'offline' }), {
+          headers: { 'Content-Type': 'application/json' },
+        });
+      })
+  );
+});
