@@ -65,8 +65,14 @@ getToken(messaging, {
   })
 
 
+  if(navigator.onLine){
+	alert('you are online')
+  }
+  else if(navigator.onLine == false){
+	alert('you are offline')
 
-  console.log(navigator.onLine)
+  }
+
 </script>
 
 <template>
